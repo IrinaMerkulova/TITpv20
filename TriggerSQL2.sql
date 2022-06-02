@@ -1,0 +1,6 @@
+insert into EmployeeTrigger values(1, 'John', 5000, 'Male', 3) 
+insert into EmployeeTrigger values(2, 'Mike', 3400, 'Male', 2)
+insert into EmployeeTrigger values(3, 'Pam', 6000, 'Female', 1)
+insert into EmployeeTrigger values(4, 'Todd', 4800, 'Male', 4)
+insert into EmployeeTrigger values(5, 'Sara', 3200, 'Female', 1)
+insert into EmployeeTrigger values(6, 'Ben', 4800, 'Male', 3)
