@@ -173,8 +173,8 @@ select * from EmployeeTrigger
 select * from EmployeeAudit
 
 
-*done Created table Department2 and inserted data
-create table Department2
+*done Created table Department and inserted data
+create table Department
 (
 Id int primary key,
 DeptName nvarchar(20)
