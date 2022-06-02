@@ -233,6 +233,8 @@ DepartmentId int
 )
 
 ---sisestame andmed
+** insreted values in table 
+
 insert into Department (Id, DepartmentName, Location, DepartmentHead)
 values (1, 'IT', 'London', 'Rick')
 insert into Department (Id, DepartmentName, Location, DepartmentHead)
