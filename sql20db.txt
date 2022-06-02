@@ -516,13 +516,13 @@ as begin
 	select * from inserted
 end
 
-update EmployeeTrigger set Name = 'Todd', Salary = 2345,
+update EmployeeTrigger set Name = 'Todd', Salary = 2345,   * tehtud
 Gender = 'Male' where Id = 4
 
 
 --- teeme update triggeri korda
 create trigger trEmployeeForUpdate
-on EmployeeTrigger
+on EmployeeTrigger    * tehtud
 for update
 as begin
 	-- deklareerisime muutujad, mida hakkame kasutama
