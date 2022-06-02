@@ -868,7 +868,7 @@ git push
 -- enne triggeri tegemist tuleb teha vaade   
 -- create view vemployeedetails
 -- as
--- select employeetrigger.id, name, gender, deptname
+-- select employeetrigger.id, name, gender, DepartmentName
 -- from employeetrigger
 -- join department
 -- on employeetrigger.departmentid = department.id
@@ -876,27 +876,27 @@ git push
 
 
 ---- instead of insert trigger
-create trigger trEmployeeDetailsInsteadOfInsert
-on vEmployeeDetails
-instead of insert
-as begin
-	declare @DeptId int
+-- create trigger tremployeedetailsinsteadofinsert
+-- on vemployeedetails
+-- instead of insert
+-- as begin
+	-- declare @deptid int
 
-	select @DeptId = Department.Id
-	from Department 
-	join inserted
-	on inserted.DeptName = Department.DeptName
+	-- select @deptid = department.id
+	-- from department 
+	-- join inserted
+	-- on inserted.departmentname = department.departmentname
 
-	if(@DeptId is null)
-	begin
-		raiserror('Invalid Department Name. Statement terminated', 16, 1)
-		return
-	end
+	-- if(@deptid is null)
+	-- begin
+		-- raiserror('invalid department name. statement terminated', 16, 1)
+		-- return
+	-- end
 
-	insert into EmployeeTrigger(Id, Name, Gender, DepartmentId)
-	select Id, Name, Gender, @DeptId
-	from inserted
-end
+	-- insert into employeetrigger(id, name, gender, departmentid)
+	-- select id, name, gender, @deptid
+	-- from inserted
+-- end
 --- raiserror funktsioon
 -- selle eesmärk on välja tuua veateade, kui DepartmentName veerus ei ole väärtust
 -- ja ei ühti sisestatud väärtusega
