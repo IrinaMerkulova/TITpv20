@@ -645,7 +645,7 @@ select * from vEmployeeDetailsUpdate
 update EmployeeTrigger set DepartmentId = 4
 where Id = 4
 
---- loome triggeri   *Добавляем триггер вместо апдейта. 
+--- loome triggeri   *Добавляем триггер апдейта, обновляющий КОНКРЕТНУЮ переменную. 
 alter trigger trEmployeeDetailsInsteadOfUpdate
 on vEmployeeDetailsUpdate
 instead of update
