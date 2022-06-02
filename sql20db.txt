@@ -182,7 +182,7 @@ Name nvarchar(50),
 Gender nvarchar(10),
 Salary nvarchar(50),
 DepartmentId int
-)
+) on tehtud
 
 ---sisestame andmed
 insert into Department (Id, DepartmentName, Location, DepartmentHead)
