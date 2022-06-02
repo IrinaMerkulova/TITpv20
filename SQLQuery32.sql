@@ -1,0 +1,1 @@
+spGetEmployeesByGenderAndDepartment @DepartmentId =  1, @Gender = 'Male'
