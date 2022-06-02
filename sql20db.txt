@@ -593,7 +593,7 @@ on EmployeeTrigger.DepartmentId = Department.Id
 
 
 
----- instead of insert trigger
+---- instead of insert trigger *Вместо триггера insert (Вставляем Имя, Пол, idОтдела)
 create trigger trEmployeeDetailsInsteadOfInsert
 on vEmployeeDetails
 instead of insert
