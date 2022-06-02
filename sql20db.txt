@@ -686,7 +686,7 @@ set Name = 'Johny', Gender = 'Female', DeptName = 'IT'
 where Id = 1
 
 
---- delete trigger
+--- delete trigger триггер который удаляет данные
 
 create trigger trEmployeeDetails_InsteadOfDelete
 on vEmployeeDetails
