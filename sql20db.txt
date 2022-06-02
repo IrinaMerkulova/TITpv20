@@ -415,7 +415,7 @@ select * from Employees
 --- DML-i peamised käsud: Insert, Update ja Delete
 
 -- after trigger:  käivitub peale mingit tegevust
--- instead trigger: käivitub enne triggeri tegevuse toimumist
+-- instead trigger: käivitub enne triggeri tegevuse toimumist *done
 create database TITpv22
 *creating new database
 
@@ -435,18 +435,19 @@ insert into EmployeeTrigger values(3, 'Pam', 6000, 'Female', 1)
 insert into EmployeeTrigger values(4, 'Todd', 4800, 'Male', 4)
 insert into EmployeeTrigger values(5, 'Sara', 3200, 'Female', 1)
 insert into EmployeeTrigger values(6, 'Ben', 4800, 'Male', 3)
+*Adding new data to a table
 
 create table EmployeeAudit
 (
 Id int identity(1, 1) primary key,
 AuditData nvarchar(1000)
 )
-
+*creating a new table
 
 --- nüüd teeme triggeri, et kui sisestan uue töötaja EmployeeTrigger tabelisse,
 --- siis EmployeeAudit tabelisse tulevad andmed
 
---trigger
+--trigger *done
 create trigger tr_Employee_ForInsert
 on EmployeeTrigger
 for insert
@@ -458,8 +459,10 @@ as begin
 	values('New employee with Id = ' + cast(@Id as nvarchar(5)) 
 	+ ' is added at ' + cast(Getdate() as nvarchar(20)))
 end
+*creating trigger tr_Employee_ForInsert
 
 insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
+*adds data to a table row
 
 select * from EmployeeAudit
 
