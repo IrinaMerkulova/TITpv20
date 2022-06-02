@@ -396,11 +396,11 @@
 -- insert into employeetrigger values(5, 'sara', 3200, 'female', 1)
 -- insert into employeetrigger values(6, 'ben', 4800, 'male', 3)
 
-create table EmployeeAudit
-(
-Id int identity(1, 1) primary key,
-AuditData nvarchar(1000)
-)
+-- create table employeeaudit
+-- (
+-- id int identity(1, 1) primary key,
+-- auditdata nvarchar(1000)
+-- )
 
 
 --- nüüd teeme triggeri, et kui sisestan uue töötaja EmployeeTrigger tabelisse,
