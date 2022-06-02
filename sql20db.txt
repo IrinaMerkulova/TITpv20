@@ -646,15 +646,16 @@ update vEmployeeDetails
 set DeptName = 'Payroll'
 where Id = 2
 
+--change vEmployeeDetailsUpdates to vEmployeeDetails because vEmployeeDetailsUpdate wasn't created
 --- teeme vaate
-alter view vEmployeeDetailsUpdate
+alter view vEmployeeDetails
 as
 select EmployeeTrigger.Id, Name, Salary, Gender, DeptName
 from EmployeeTrigger
 join Department
 on EmployeeTrigger.DepartmentId = Department.Id
 
-select * from vEmployeeDetailsUpdate
+select * from vEmployeeDetails
 update EmployeeTrigger set DepartmentId = 4
 where Id = 4
 
