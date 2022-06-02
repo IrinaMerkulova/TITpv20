@@ -633,7 +633,7 @@ update vEmployeeDetails  *обновляем триггером название
 set DeptName = 'Payroll'
 where Id = 2
 
---- teeme vaate
+--- teeme vaate    *Создаем другой вид для апдейта, пришлось пересоздать таблицу и триггер
 alter view vEmployeeDetailsUpdate
 as
 select EmployeeTrigger.Id, Name, Salary, Gender, DeptName
@@ -645,7 +645,7 @@ select * from vEmployeeDetailsUpdate
 update EmployeeTrigger set DepartmentId = 4
 where Id = 4
 
---- loome triggeri
+--- loome triggeri   *Добавляем триггер вместо апдейта. 
 alter trigger trEmployeeDetailsInsteadOfUpdate
 on vEmployeeDetailsUpdate
 instead of update
