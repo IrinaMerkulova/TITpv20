@@ -583,6 +583,7 @@ on EmployeeTrigger.DepartmentId = Department.Id
 
 
 ---- instead of insert trigger
+--- триггер для вставки
 
 create trigger trEmployeeDetails1InsteadOfInsert
 on vEmployeeDetails1
@@ -625,20 +626,21 @@ set DeptName = 'Payroll'
 where Id = 2
 
 --- teeme vaate
-alter view vEmployeeDetailsUpdate
+alter view vEmployeeDetails1Update
 as
 select EmployeeTrigger.Id, Name, Salary, Gender, DeptName
 from EmployeeTrigger
 join Department
 on EmployeeTrigger.DepartmentId = Department.Id
 
-select * from vEmployeeDetailsUpdate
+select * from vEmployeeDetails1Update
 update EmployeeTrigger set DepartmentId = 4
 where Id = 4
 
 --- loome triggeri
-alter trigger trEmployeeDetailsInsteadOfUpdate
-on vEmployeeDetailsUpdate
+--- cоздаем триггер на обновление, при обновление если что то будет не правильно выдаст ошибку
+alter trigger trEmployeeDetails1InsteadOfUpdate
+on vEmployeeDetails1Update
 instead of update
 as begin
 	if(update(Id))
@@ -653,7 +655,7 @@ as begin
 		select @DeptId = Department.Id
 		from Department
 		join inserted
-		on inserted.DeptName = Department.DeptName
+		on inserted.Name = Department.Name
 
 		if(@DeptId is null)
 		begin
