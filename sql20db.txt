@@ -593,16 +593,16 @@ select * from EmployeeTrigger
 select * from EmployeeAudit
 
 
-create table Department
-(
-Id int primary key,
-DeptName nvarchar(20)
-)
-
-insert into Department values(1, 'IT')
-insert into Department values(2, 'Payroll')
-insert into Department values(3, 'HR')
-insert into Department values(4, 'Admin')
+-- create table Department
+-- (
+-- Id int primary key,
+-- DeptName nvarchar(20)
+-- )
+																		* see oli juba tehtud
+-- insert into Department values(1, 'IT')
+-- insert into Department values(2, 'Payroll')
+-- insert into Department values(3, 'HR')
+-- insert into Department values(4, 'Admin')
 
 
 -- enne triggeri tegemist tuleb teha vaade
