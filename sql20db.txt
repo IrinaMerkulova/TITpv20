@@ -217,7 +217,7 @@ values (9, 'James', 'Male', 6500, NULL)
 insert into Employees (Id, Name, Gender, Salary, DepartmentId)
 values (10, 'Russell', 'Male', 8800, NULL)
 
-select * from Employees
+select * from Employees on tehtud
 
 --- saan ainult selles tabelis olevad veerud
 select distinct Name, DepartmentId from Employees
