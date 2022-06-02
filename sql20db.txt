@@ -7,6 +7,8 @@ create database Tarpe21
 DRop DataBASE Tarpe21
 
 --- teeme tabeli
+
+**table was created
 create table Gender
 (
 Id int NOT NULL primary key,
