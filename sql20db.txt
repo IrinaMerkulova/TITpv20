@@ -616,7 +616,7 @@ as begin
 	select @DeptId = Department.Id
 	from Department 
 	join inserted
-	on inserted.DeptName = Department.DeptName
+	on inserted.DeptName = Department.DeptName              * tehtud
 
 	if(@DeptId is null)
 	begin
