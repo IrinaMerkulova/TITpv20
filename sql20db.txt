@@ -67,7 +67,7 @@ select * from Person
 select * from Gender
 
 insert into Person (Id, Name, Email)
-values (8, 'Test', 'Test')
+values (8, 'Test', 'Test') on tehtud
 
 ---lisame uue veeru tabelisse
 alter table Person
