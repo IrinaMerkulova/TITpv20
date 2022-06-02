@@ -1,10 +1,47 @@
--- db loomine
-create database Tarpe21
+git CMD
+cd TITpv20
+cd desktop
+git config --global user.name "Alen Kutnjashenko"
+git config --global user.email "alankutnj@gmail.com"
+
+C:\Users\opilane\Desktop>git global --global --list
+git: 'global' is not a git command. See 'git --help'.
+
+C:\Users\opilane\Desktop>git config --global --list
+user.name=Alen Kutnjashenko
+user.email=alankutnj@gmail.com
+
+C:\Users\opilane\Desktop>git clone https://github.com/IrinaMerkulova/TITpv20
+Cloning into 'TITpv20'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), 5.08 KiB | 472.00 KiB/s, done.
+
+C:\Users\opilane\Desktop>cd TITpv20
+
+C:\Users\opilane\Desktop\TITpv20>git branch AlenK
+
+C:\Users\opilane\Desktop\TITpv20>git checkout AlenK
+Switched to branch 'AlenK'
+
+C:\Users\opilane\Desktop\TITpv20>git status
+On branch AlenK
+nothing to commit, working tree clean
+
+git add .
+git commit -a -m "git käsud on lisatud"
+
+git push
+
+-- db loomine *tehtud
+create database TITpv20
 
 -- db kustutamine
 DRop DataBASE Tarpe21
 
---- teeme tabeli
+--- teeme tabeli Sugu ja Isik *tehtud
 create table Gender
 (
 Id int NOT NULL primary key,
@@ -47,6 +84,8 @@ values (7, 'Spiderman', 'spider@spiderman.com', 2)
 
 -- vaatame tabeli andmeid
 select * from Person
+
+* tabelid on täidetud andmetega
 
 --- võõrvõtme piirangu maha võtmine
 alter table Person
