@@ -624,9 +624,9 @@ select * from vEmployeeDetailsUpdate
 update EmployeeTrigger set DepartmentId = 4
 where Id = 4
 
---- loome triggeri
+--- loome triggeri -tehtud
 alter trigger trEmployeeDetailsInsteadOfUpdate
-on vEmployeeDetailsUpdate
+on vEmployeeDetails
 instead of update
 as begin
 	if(update(Id))
@@ -641,7 +641,7 @@ as begin
 		select @DeptId = Department.Id
 		from Department
 		join inserted
-		on inserted.DeptName = Department.DeptName
+		on inserted.DeptName = Department.DepartmentName
 
 		if(@DeptId is null)
 		begin
@@ -683,7 +683,7 @@ end
 select * from EmployeeTrigger
 
 update vEmployeeDetailsUpdate
-set Name = 'Johny', Gender = 'Female', DeptName = 'IT'
+set Name = 'Johny', Gender = 'Female', DepartmentName = 'IT'
 where Id = 1
 
 
