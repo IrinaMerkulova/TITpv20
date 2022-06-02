@@ -191,6 +191,8 @@ select * from Person order by cast(Age as int)
 select * from Person order by Age
 
 -- kõikide isikute koondvanus
+**counted age from person
+
 select sum(cast(Age as int)) from Person
 
 --- kuvab kõige nooremat isikut
