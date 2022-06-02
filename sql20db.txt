@@ -865,7 +865,7 @@ git push
 -- insert into department values(4, 'admin')
 
 
--- enne triggeri tegemist tuleb teha vaade 
+-- enne triggeri tegemist tuleb teha vaade   
 create view vEmployeeDetails
 as
 select EmployeeTrigger.Id, Name, Gender, DeptName
