@@ -167,7 +167,7 @@ as begin
 end
 
 select * from EmployeeTrigger
--- changes someone who has id of 4 to Todd123 changes their gender and pay
+-- changes someone who has id of 4 to Todd123 changes th
 update EmployeeTrigger set Name = 'Todd123', Salary = 3456,
 Gender = 'Female', DepartmentId = 3 
 where Id = 4
@@ -175,20 +175,20 @@ where Id = 4
 select * from EmployeeTrigger
 select * from EmployeeAudit
 
-
+ --add Department titles
 create table Department
 (
 Id int primary key,
 DeptName nvarchar(20)
 )
+--- add titles to Department
+insert into Department values(1, 'IT');
+insert into Department values(2, 'Payroll');
+insert into Department values(3, 'HR');
+insert into Department values(4, 'Admin');
 
-insert into Department values(1, 'IT')
-insert into Department values(2, 'Payroll')
-insert into Department values(3, 'HR')
-insert into Department values(4, 'Admin')
+select * from Department
 
-
--- enne triggeri tegemist tuleb teha vaade
 create view vEmployeeDetails
 as
 select EmployeeTrigger.Id, Name, Gender, DeptName
@@ -197,7 +197,12 @@ join Department
 on EmployeeTrigger.DepartmentId = Department.Id
 
 
-
+-- enne triggeri tegemist tuleb teha vaade
+--- raiserror function
+-- It is intended to display an error message if there is no value in the DepartmentName column
+-- and does not match the value entered
+-- the first parameter is the content of the error message, the second is the error rate (No 16 means general errors),
+-- The third is an error condition
 ---- instead of insert trigger
 create trigger trEmployeeDetailsInsteadOfInsert
 on vEmployeeDetails

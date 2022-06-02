@@ -401,7 +401,6 @@ exec @EmployeeName = spGetNameById2 1
 print 'Name of the employee = ' + @EmployeeName
 
 select * from Employees
-
 --tund 4 --- trigger
 
 -- triggereid on kolme tüüpi
@@ -417,8 +416,6 @@ select * from Employees
 
 -- after trigger:  käivitub peale mingit tegevust
 -- instead trigger: käivitub enne triggeri tegevuse toimumist
-
--- Create a new database
 create database TITpv22;
 
 use TITpv22;
@@ -434,7 +431,6 @@ DepartmentId int
 );
 
 -- add data to EmployeeTrigger
-
 insert into EmployeeTrigger values(1, 'John', 5000, 'Male', 3)
 insert into EmployeeTrigger values(2, 'Mike', 3400, 'Male', 2)
 insert into EmployeeTrigger values(3, 'Pam', 6000, 'Female', 1)
@@ -455,11 +451,6 @@ AuditData nvarchar(1000)
 
 --trigger
 -- add trigger add audit
-
---- nüüd teeme triggeri, et kui sisestan uue töötaja EmployeeTrigger tabelisse,
---- siis EmployeeAudit tabelisse tulevad andmed
-
---trigger
 -- a triggers combine insert data like insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
 -- to a with new id and when added
 create trigger tr_Employee_ForInsert
@@ -515,7 +506,8 @@ Gender = 'Male' where Id = 4
 
 
 --- teeme update triggeri korda
-create trigger trEmployeeForUpdate
+-- update data from databases tables
+create trigger trEmployeeForUpdate1
 on EmployeeTrigger
 for update
 as begin
@@ -578,7 +570,7 @@ as begin
 end
 
 select * from EmployeeTrigger
-
+-- changes someone who has id of 4 to Todd123 changes th
 update EmployeeTrigger set Name = 'Todd123', Salary = 3456,
 Gender = 'Female', DepartmentId = 3 
 where Id = 4
@@ -586,20 +578,20 @@ where Id = 4
 select * from EmployeeTrigger
 select * from EmployeeAudit
 
-
+ --add Department titles
 create table Department
 (
 Id int primary key,
 DeptName nvarchar(20)
 )
+--- add titles to Department
+insert into Department values(1, 'IT');
+insert into Department values(2, 'Payroll');
+insert into Department values(3, 'HR');
+insert into Department values(4, 'Admin');
 
-insert into Department values(1, 'IT')
-insert into Department values(2, 'Payroll')
-insert into Department values(3, 'HR')
-insert into Department values(4, 'Admin')
+select * from Department
 
-
--- enne triggeri tegemist tuleb teha vaade
 create view vEmployeeDetails
 as
 select EmployeeTrigger.Id, Name, Gender, DeptName
@@ -608,7 +600,12 @@ join Department
 on EmployeeTrigger.DepartmentId = Department.Id
 
 
-
+-- enne triggeri tegemist tuleb teha vaade
+--- raiserror function
+-- It is intended to display an error message if there is no value in the DepartmentName column
+-- and does not match the value entered
+-- the first parameter is the content of the error message, the second is the error rate (No 16 means general errors),
+-- The third is an error condition
 ---- instead of insert trigger
 create trigger trEmployeeDetailsInsteadOfInsert
 on vEmployeeDetails
@@ -738,6 +735,4 @@ end
 
 delete from vEmployeeDetails where Id = 2
 --- kui seda triggerit ei oleks, siis annaks veateate
-
-
 
