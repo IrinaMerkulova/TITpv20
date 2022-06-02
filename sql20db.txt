@@ -452,6 +452,10 @@ insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
 select * from EmployeeAudit
 
 --- peale kustutamist tekiks info EmployeeAudit tabelisse
+
+
+
+--после удаления информация появится в таблице EmployeeAudit
 create trigger EmployeeForDelete
 on EmployeeTrigger
 for delete
