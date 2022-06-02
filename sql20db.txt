@@ -23,7 +23,7 @@ GenderId int
 insert into Gender (Id, Gender)
 values (1, 'Female')
 insert into Gender (Id, Gender)
-values (2, 'Male')
+values (2, 'Male') on tehtud
 
 --- nüüd saab kasutada ainult Gender tabelis olevaid väärtuseid
 alter table Person add constraint tblPerson_GenderId_FK
