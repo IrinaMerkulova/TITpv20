@@ -69,30 +69,30 @@ select * from Gender
 insert into Person (Id, Name, Email)
 values (8, 'Test', 'Test')
 
----lisame uue veeru tabelisse
+---lisame uue veeru tabelisse on tehtud
 alter table Person
 add Age nvarchar(10)
 
---uuendame andmeid
+--uuendame andmeid on tehtud
 update Person
 set Age = 149
 where Id = 8
 
--- veerule piirnagu panemine
+-- veerule piirnagu panemine on tehtud
 alter table Person
 add constraint CK_Person_Age check (Age > 0 and Age < 150)
 
 insert into Person (Id, Name, Email, GenderId, Age)
 values (9, 'Test', 'Test', 2, 160)
 
---rea kustutamine
+--rea kustutamine on tehtud
 select * from Person
 go
 delete from Person where Id = 8
 go
 select * from Person
 
---- lisame veeru juurde
+--- lisame veeru juurde on tehtud
 alter table Person
 add City nvarchar(25)
 
