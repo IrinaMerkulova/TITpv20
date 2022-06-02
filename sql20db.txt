@@ -63,7 +63,7 @@ default 3 for GenderId
 
 ---- 2 tund
 
-select * from Person
+select * from Person *on tehtud
 select * from Gender
 
 insert into Person (Id, Name, Email)
