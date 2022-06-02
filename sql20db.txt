@@ -32,6 +32,7 @@ insert into Gender (Id, Gender)
 values (2, 'Male')
 
 --- nüüd saab kasutada ainult Gender tabelis olevaid väärtuseid
+**commands worked
 alter table Person add constraint tblPerson_GenderId_FK
 foreign key (GenderId) references Gender(Id)
 
