@@ -535,10 +535,10 @@
 -- deptname nvarchar(20)
 -- )
 
-insert into Department values(1, 'IT')
-insert into Department values(2, 'Payroll')
-insert into Department values(3, 'HR')
-insert into Department values(4, 'Admin')
+-- insert into department values(1, 'it')
+-- insert into department values(2, 'payroll')
+-- insert into department values(3, 'hr')
+-- insert into department values(4, 'admin')
 
 
 -- enne triggeri tegemist tuleb teha vaade
