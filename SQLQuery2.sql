@@ -256,8 +256,10 @@ update EmployeeTrigger set DepartmentId = 4
 where Id = 4
 
 --- loome triggeri
-alter trigger trEmployeeDetailsInsteadOfUpdate
-on vEmployeeDetailsUpdate
+-- change trEmployeeDetailsInsteadOfUpdate and vEmployeeDetailsUpdate to vEmployeeDetails alter
+-- and update databases data
+create trigger trEmployeeDetailsInsteadOfUpdate
+on vEmployeeDetails
 instead of update
 as begin
 	if(update(Id))
@@ -313,13 +315,13 @@ end
 
 select * from EmployeeTrigger
 
-update vEmployeeDetailsUpdate
+update vEmployeeDetails
 set Name = 'Johny', Gender = 'Female', DeptName = 'IT'
 where Id = 1
 
 
 --- delete trigger
-
+-- delete
 create trigger trEmployeeDetails_InsteadOfDelete
 on vEmployeeDetails
 instead of delete
