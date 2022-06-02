@@ -529,11 +529,11 @@
 -- select * from employeeaudit
 
 
-create table Department
-(
-Id int primary key,
-DeptName nvarchar(20)
-)
+-- create table department
+-- (
+-- id int primary key,
+-- deptname nvarchar(20)
+-- )
 
 insert into Department values(1, 'IT')
 insert into Department values(2, 'Payroll')
