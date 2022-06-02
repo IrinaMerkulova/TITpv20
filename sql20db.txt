@@ -903,9 +903,9 @@ git push
 -- esimene parameeter on veateate sisu, teiene on veatase (nr 16 tähendab üldiseid vigu),
 -- kolmas on veaolek
 
-insert into vEmployeeDetails values(7, 'Valarie', 'Female', 'assd')
+-- insert into vemployeedetails values(7, 'valarie', 'female', 'assd')
 
-delete from EmployeeTrigger where Id = 7
+-- delete from employeetrigger where id = 7
 --- 10 tund SQL
 select * from EmployeeTrigger
 select * from vEmployeeDetails
