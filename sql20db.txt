@@ -73,7 +73,7 @@ default 3 for GenderId
 
 
 ---- 2 tund
-
+**ive checked 2 tables and tried to add 2 values
 select * from Person
 select * from Gender
 
