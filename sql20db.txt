@@ -526,7 +526,7 @@
 -- where id = 4
 
 -- select * from employeetrigger
-select * from EmployeeAudit
+-- select * from employeeaudit
 
 
 create table Department
