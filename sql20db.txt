@@ -528,6 +528,7 @@ select * from EmployeeAudit    * tehtud
 * используют обе таблицы, для чего есть вставка и удаление
 
 -- after trigger näide
+* тригер пример
 create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
