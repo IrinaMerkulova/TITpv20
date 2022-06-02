@@ -1,0 +1,8 @@
+insert into Department (Id, DepartmentName, Location, DepartmentHead)
+values (1, 'IT', 'London', 'Rick')
+insert into Department (Id, DepartmentName, Location, DepartmentHead)
+values (2, 'Payroll', 'Delhi', 'Ron')
+insert into Department (Id, DepartmentName, Location, DepartmentHead)
+values (3, 'HR', 'New York', 'Christie')
+insert into Department (Id, DepartmentName, Location, DepartmentHead)
+values (4, 'Other Deparment', 'Sydney', 'Cindrella')
