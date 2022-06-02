@@ -236,6 +236,7 @@ update vEmployeeDetails
 set DeptName = 'Payroll'
 where Id = 2
 
+*skipped, because error
 --- teeme vaate
 alter view vEmployeeDetailsUpdate
 as
@@ -312,7 +313,7 @@ where Id = 1
 
 
 --- delete trigger
-
+*created trigger for delete
 create trigger trEmployeeDetails_InsteadOfDelete
 on vEmployeeDetails
 instead of delete
