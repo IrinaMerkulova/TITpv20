@@ -1,8 +1,8 @@
--- db loomine
-create database Tarpe21
+-- -- db loomine
+-- create database tarpe21
 
--- db kustutamine
-DRop DataBASE Tarpe21
+-- -- db kustutamine
+-- drop database tarpe21
 
 --- teeme tabeli
 create table Gender
