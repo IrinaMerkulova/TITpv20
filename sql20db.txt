@@ -417,6 +417,7 @@ select * from Employees
 -- after trigger:  käivitub peale mingit tegevust
 -- instead trigger: käivitub enne triggeri tegevuse toimumist
 create database TITpv22
+*creating new database
 
 create table EmployeeTrigger
 (
@@ -426,7 +427,7 @@ Salary int,
 Gender nvarchar(10),
 DepartmentId int
 )
-
+*creating a new table
 
 insert into EmployeeTrigger values(1, 'John', 5000, 'Male', 3)
 insert into EmployeeTrigger values(2, 'Mike', 3400, 'Male', 2)
