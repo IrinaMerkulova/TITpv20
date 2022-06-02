@@ -90,7 +90,7 @@ select * from Person
 go
 delete from Person where Id = 8
 go
-select * from Person
+select * from Person on tehtud
 
 --- lisame veeru juurde
 alter table Person
