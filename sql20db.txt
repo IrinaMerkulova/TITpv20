@@ -562,7 +562,7 @@ select * from EmployeeAudit
 create table Department
 (
 Id int primary key,
-DeptName nvarchar(20)
+Name nvarchar(20)
 )
 
 insert into Department values(1, 'IT')
@@ -572,7 +572,7 @@ insert into Department values(4, 'Admin')
 
 
 -- enne triggeri tegemist tuleb teha vaade
-create view vEmployeeDetails
+create view vEmployeeDetails1
 as
 select EmployeeTrigger.Id, Name, Gender, DeptName
 from EmployeeTrigger
@@ -584,8 +584,8 @@ on EmployeeTrigger.DepartmentId = Department.Id
 
 ---- instead of insert trigger
 
-create trigger trEmployeeDetailsInsteadOfInsert
-on vEmployeeDetails
+create trigger trEmployeeDetails1InsteadOfInsert
+on vEmployeeDetails1
 instead of insert
 as begin
 	declare @DeptId int
@@ -611,15 +611,16 @@ end
 -- esimene parameeter on veateate sisu, teiene on veatase (nr 16 tähendab üldiseid vigu),
 -- kolmas on veaolek
 
-insert into vEmployeeDetails values(7, 'Valarie', 'Female', 'assd')
+--- tõrkekäiviti kuvamiseks
+insert into Employees values(7, 'Valarie', 'Female', 'assd')
 
 delete from EmployeeTrigger where Id = 7
 --- 10 tund SQL
 select * from EmployeeTrigger
-select * from vEmployeeDetails
+select * from Employees
 
 
-update vEmployeeDetails
+update Employees
 set DeptName = 'Payroll'
 where Id = 2
 
