@@ -1,4 +1,4 @@
-git CMD
+﻿git CMD
 C:\Users\opilane\Desktop>git config --global user.name "Anton Slepnjov"
 
 C:\Users\opilane\Desktop>git config --global user.email "phonemailanton@gmail.com"
@@ -421,7 +421,7 @@ select * from Employees
 -- instead trigger: käivitub enne triggeri tegevuse toimumist
 create database TITpv22
 
-create table EmployeeTrigger
+create table EmployeeTrigger            *Создаем триггер
 (
 Id int primary key,
 Name varchar(30),
@@ -430,7 +430,7 @@ Gender nvarchar(10),
 DepartmentId int
 )
 
-
+*заполняем его
 insert into EmployeeTrigger values(1, 'John', 5000, 'Male', 3)
 insert into EmployeeTrigger values(2, 'Mike', 3400, 'Male', 2)
 insert into EmployeeTrigger values(3, 'Pam', 6000, 'Female', 1)
