@@ -234,7 +234,7 @@ add City nvarchar(25)
 
 alter table Employees
 add DepartmentId
-int null
+int null on tehtud
 
 
 --- lisame tabelid
@@ -263,7 +263,7 @@ where Id = 8
 update Employees set FirstName = 'James', MiddleName = '007', LastName = 'Bond'
 where Id = 9
 update Employees set FirstName = NULL, MiddleName = NULL, LastName = 'Crowe'
-where Id = 10
+where Id = 10 on tehtud
 
 
 --- igast reast võtab esimeses veerus täidetud lahtri ja kuvab ainult seda
