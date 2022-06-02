@@ -146,7 +146,7 @@ select top 3 Age, Name from Person
 --- näitab esimesed 50% tabelis *on tehtud
 select top 50 percent * from Person
 
--- järjestab vanuse järgi isikud
+-- järjestab vanuse järgi isikud *on tehtud
 select * from Person order by cast(Age as int)
 select * from Person order by Age
 
