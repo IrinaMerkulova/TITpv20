@@ -46,19 +46,19 @@ values (6, 'Antman', 'ant"ant.com', 2)
 insert into Person(Id, Name, Email, GenderId)
 values (7, 'Spiderman', 'spider@spiderman.com', 2)
 
--- vaatame tabeli andmeid
-select * from Herson
+-- vaatame tabeli andmeid *
+select * from Person
 
 --- võõrvõtme piirangu maha võtmine
-alter table Herson
-drop constraint tblHerson_GenderId_FK
+alter table Person
+drop constraint tblPerson_GenderId_FK
 
 -- sisestame väärtuse tabelisse
 insert into Gender (Id, Gender)
 values (3, 'Unknown')
 -- lisame võõrvõtme uuesti
-alter table Herson
-add constraint DF_Herson_GenderId
+alter table Person
+add constraint DF_Person_GenderId
 default 3 for GenderId
 
 
@@ -71,30 +71,30 @@ insert into Person(Id, Name, Email)
 values (8, 'Test', 'Test')
 
 ---lisame uue veeru tabelisse
-alter table Herson
+alter table Person
 add Age nvarchar(10)
 
 --uuendame andmeid
-update Herson
+update Person
 set Age = 149
 where Id = 8
 
 -- veerule piirnagu panemine
-alter table Herson
-add constraint CK_Herson_Age check (Age > 0 and Age < 150)
+alter table Person
+add constraint CK_Person_Age check (Age > 0 and Age < 150)
 
 insert into Person(Id, Name, Email, GenderId, Age)
 values (9, 'Test', 'Test', 2, 160)
 
 --rea kustutamine
-select * from Herson
+select * from Person
 go
 delete from Personwhere Id = 8
 go
-select * from Herson
+select * from Person
 
 --- lisame veeru juurde
-alter table Herson
+alter table Person
 add City nvarchar(25)
 
 -- tahame tead kõiki, kes elavad Gothami linnas 
@@ -138,26 +138,26 @@ select * from Personorder by Name
 select * from Personorder by Name desc
 
 ---võtab kolm esimest rida
-select top 3 * from Herson
+select top 3 * from Person
 
 --- kolm esimest, aga tabeli järjestus on Age ja siis Name
-select * from Herson
-select top 3 Age, Name from Herson
+select * from Person
+select top 3 Age, Name from Person
 
 --- näitab esimesed 50% tabelis
-select top 50 percent * from Herson
+select top 50 percent * from Person
 
 -- järjestab vanuse järgi isikud
 select * from Personorder by cast(Age as int)
 select * from Personorder by Age
 
 -- kõikide isikute koondvanus
-select sum(cast(Age as int)) from Herson
+select sum(cast(Age as int)) from Person
 
 --- kuvab kõige nooremat isikut
-select min(cast(Age as int)) from Herson
+select min(cast(Age as int)) from Person
 --- kõige vanem isik
-select max(cast(Age as int)) from Herson
+select max(cast(Age as int)) from Person
 
 select City, sum(cast(Age as int)) as TotalAge from Persongroup by City
 
