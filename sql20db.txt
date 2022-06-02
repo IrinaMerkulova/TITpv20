@@ -361,7 +361,7 @@ exec @EmployeeName = spGetNameById2 1
 print 'Name of the employee = ' + @EmployeeName
 
 select * from Employees
-
+ on tehtud
 --tund 4 --- trigger
 
 -- triggereid on kolme tüüpi
