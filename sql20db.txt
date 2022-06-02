@@ -139,23 +139,23 @@ select * from Person order by Name desc
 ---võtab kolm esimest rida on tehtud
 select top 3 * from Person
 
---- kolm esimest, aga tabeli järjestus on Age ja siis Name
+--- kolm esimest, aga tabeli järjestus on Age ja siis Name on tehtud
 select * from Person
 select top 3 Age, Name from Person
 
---- näitab esimesed 50% tabelis
+--- näitab esimesed 50% tabelis on tehtud
 select top 50 percent * from Person
 
--- järjestab vanuse järgi isikud
+-- järjestab vanuse järgi isikud on tehtud
 select * from Person order by cast(Age as int)
 select * from Person order by Age
 
--- kõikide isikute koondvanus
+-- kõikide isikute koondvanus on tehtud
 select sum(cast(Age as int)) from Person
 
---- kuvab kõige nooremat isikut
+--- kuvab kõige nooremat isikut on tehtud
 select min(cast(Age as int)) from Person
---- kõige vanem isik
+--- kõige vanem isik on tehtud
 select max(cast(Age as int)) from Person
 
 select City, sum(cast(Age as int)) as TotalAge from Person group by City
@@ -166,7 +166,7 @@ select City, sum(cast(Age as int)) as TotalAge from Person group by City
 
 --- tund 3
 
---- loome uued tabelid
+--- loome uued tabelid on tehtud
 create table Department
 (
 Id int primary key,
@@ -184,7 +184,7 @@ Salary nvarchar(50),
 DepartmentId int
 )
 
----sisestame andmed
+---sisestame andmed on tehtud
 insert into Department (Id, DepartmentName, Location, DepartmentHead)
 values (1, 'IT', 'London', 'Rick')
 insert into Department (Id, DepartmentName, Location, DepartmentHead)
@@ -219,12 +219,12 @@ values (10, 'Russell', 'Male', 8800, NULL)
 
 select * from Employees
 
---- saan ainult selles tabelis olevad veerud
+--- saan ainult selles tabelis olevad veerud on tehtud
 select distinct Name, DepartmentId from Employees
 
---- arvutame k]ikide palgad kokku
+--- arvutame k]ikide palgad kokku on tehtud
 select sum(cast(Salary as int)) from Employees
---- k]ige v'iksema palga saaja
+--- k]ige v'iksema palga saaja on tehtud
 select min(cast(Salary as int)) from Employees
 
 
@@ -237,37 +237,37 @@ add DepartmentId
 int null
 
 
---- lisame tabelid
+--- lisame tabelid on tehtud
 alter table Employees
 add MiddleName nvarchar(30)
 
 alter table Employees
 add LastName nvarchar(30)
 
-update Employees set FirstName = 'Tom', MiddleName = 'Nick', LastName = 'Jones'
+update Employees set Name = 'Tom', MiddleName = 'Nick', LastName = 'Jones'
 where Id = 1
-update Employees set FirstName = 'Pam', MiddleName = NULL, LastName = 'Anderson'
+update Employees set Name = 'Pam', MiddleName = NULL, LastName = 'Anderson'
 where Id = 2
-update Employees set FirstName = 'John', MiddleName = NULL, LastName = NULL
+update Employees set Name = 'John', MiddleName = NULL, LastName = NULL
 where Id = 3
-update Employees set FirstName = 'Sam', MiddleName = NULL, LastName = 'Smith'
+update Employees set Name = 'Sam', MiddleName = NULL, LastName = 'Smith'
 where Id = 4
-update Employees set FirstName = NULL, MiddleName = 'Todd', LastName = 'Someone'
+update Employees set Name = NULL, MiddleName = 'Todd', LastName = 'Someone'
 where Id = 5
-update Employees set FirstName = 'Ben', MiddleName = 'Ten', LastName = 'Sven'
+update Employees set Name = 'Ben', MiddleName = 'Ten', LastName = 'Sven'
 where Id = 6
-update Employees set FirstName = 'Sara', MiddleName = NULL, LastName = 'Connor'
+update Employees set Name = 'Sara', MiddleName = NULL, LastName = 'Connor'
 where Id = 7
-update Employees set FirstName = 'Valarie', MiddleName = 'Balerine', LastName = NULL
+update Employees set Name = 'Valarie', MiddleName = 'Balerine', LastName = NULL
 where Id = 8
-update Employees set FirstName = 'James', MiddleName = '007', LastName = 'Bond'
+update Employees set Name = 'James', MiddleName = '007', LastName = 'Bond'
 where Id = 9
-update Employees set FirstName = NULL, MiddleName = NULL, LastName = 'Crowe'
+update Employees set Name = NULL, MiddleName = NULL, LastName = 'Crowe'
 where Id = 10
 
 
---- igast reast võtab esimeses veerus täidetud lahtri ja kuvab ainult seda
-select Id, coalesce(FirstName, MiddleName, LastName) as Name
+--- igast reast võtab esimeses veerus täidetud lahtri ja kuvab ainult seda on tehtud
+select Id, coalesce(Name, MiddleName, LastName) as Name
 from Employees
 
 select * from Employees
@@ -277,26 +277,26 @@ select * from Department
 
 
 
---- loome stored procedure, mis kuvab vaate
+--- loome stored procedure, mis kuvab vaate on tehtud
 create procedure spGetEmployees
 as begin
-	select FirstName, Gender from Employees
+	select Name, Gender from Employees
 end
 
 spGetEmployees
 exec spGetEmployees
 execute spGetEmployees
 
---- 
+--- on tehtud
 create proc spGetEmployeesByGenderAndDepartment
 @Gender nvarchar(20),
 @DepartmentId int
 as begin
-	select FirstName, Gender, DepartmentId from Employees where Gender = @Gender
+	select Name, Gender, DepartmentId from Employees where Gender = @Gender
 	and DepartmentId = @DepartmentId
 end
 
---- kõik esimeses osakonnas meessoost töötavad isikud
+--- kõik esimeses osakonnas meessoost töötavad isikud on tehtud
 spGetEmployeesByGenderAndDepartment 'Male', 1
 
 spGetEmployeesByGenderAndDepartment @DepartmentId =  1, @Gender = 'Male'
@@ -311,7 +311,7 @@ as begin
 	select @EmployeeCount = count(Id) from Employees where Gender = @Gender
 end
 
--- annab teada, palju on meessoost isikuid ning kuvab vastava stringi
+-- annab teada, palju on meessoost isikuid ning kuvab vastava stringi on tehtud
 declare @TotalCount int
 exec spGetEmployeeCountByGender 'Female', @TotalCount out
 if(@TotalCount = 0)
@@ -320,31 +320,31 @@ else
 	print '@TotalCount is not null'
 print @TotalCount
 
--- annab teada, palju on meessoost isikuid
+-- annab teada, palju on meessoost isikuid on tehtud
 declare @TotalCount int
 exec spGetEmployeeCountByGender @EmployeeCount = @TotalCount out, @Gender = 'Male'
 print @TotalCount
 
----- annab kogu tabeli ridade arvu
+---- annab kogu tabeli ridade arvu on tehtud
 create proc spTotalCount2
 @TotalCount int output
 as begin
 	select @TotalCount = count(Id) from Employees
 end
---- käivitame sp
+--- käivitame sp on tehtud
 declare @TotalEmployees int
 execute spTotalCount2 @TotalEmployees output
 select @TotalEmployees
 
---- mis id all on keegi nime järgi
+--- mis id all on keegi nime järgi on tehtud
 create proc spGetNameById1
 @Id int,
 @FirstName nvarchar(50) output
 as begin
-	select @FirstName = FirstName from employees where Id = @Id
+	select @FirstName = Name from employees where Id = @Id
 end
 
---- käivitame sp
+--- käivitame sp on tehtud
 declare @FirstName nvarchar(50)
 execute spGetNameById1 6, @FirstName output
 print 'Name of the employee = ' + @FirstName
@@ -353,9 +353,9 @@ print 'Name of the employee = ' + @FirstName
 create proc spGetNameById2
 @Id int
 as begin
-	return (select FirstName from Employees where Id = @Id)
+	return (select Name from Employees where Id = @Id)
 end
--- tuleb veatead kuna kutsusime välja int-i, aga Tom on string
+-- tuleb veatead kuna kutsusime välja int-i, aga Tom on string on tehtud
 declare @EmployeeName nvarchar(50)
 exec @EmployeeName = spGetNameById2 1
 print 'Name of the employee = ' + @EmployeeName
@@ -376,7 +376,7 @@ select * from Employees
 --- DML-i peamised käsud: Insert, Update ja Delete
 
 -- after trigger:  käivitub peale mingit tegevust
--- instead trigger: käivitub enne triggeri tegevuse toimumist
+-- instead trigger: käivitub enne triggeri tegevuse toimumist on tehtud
 create database TITpv22
 
 create table EmployeeTrigger
@@ -406,7 +406,7 @@ AuditData nvarchar(1000)
 --- nüüd teeme triggeri, et kui sisestan uue töötaja EmployeeTrigger tabelisse,
 --- siis EmployeeAudit tabelisse tulevad andmed
 
---trigger
+--trigger on tehtud
 create trigger tr_Employee_ForInsert
 on EmployeeTrigger
 for insert
