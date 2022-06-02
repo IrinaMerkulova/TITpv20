@@ -45,6 +45,8 @@ AuditData nvarchar(1000)
 --- siis EmployeeAudit tabelisse tulevad andmed
 
 --trigger
+
+*done created trigger for adding into table EmployeeAudit
 create trigger tr_Employee_ForInsert
 on EmployeeTrigger
 for insert
