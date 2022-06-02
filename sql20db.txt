@@ -342,7 +342,7 @@ create proc spGetNameById1
 @FirstName nvarchar(50) output
 as begin
 	select @FirstName = FirstName from employees where Id = @Id
-end
+end on tehtud
 
 --- käivitame sp
 declare @FirstName nvarchar(50)
