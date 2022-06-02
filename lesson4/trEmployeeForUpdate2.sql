@@ -1,4 +1,4 @@
-create trigger trEmployeeForUpdate2
+create trigger trEmployeeForUpdate2 -- Trigger for logging delta changes on table EmployeeTrigger
 on EmployeeTrigger
 for update
 as begin

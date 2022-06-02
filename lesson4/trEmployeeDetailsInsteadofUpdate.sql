@@ -1,5 +1,5 @@
 alter trigger trEmployeeDetailsInsteadOfUpdate
-on vEmployeeDetailsUpdate
+on vEmployeeDetailsUpdate -- Изменение триггера на обновление, чтобы показать дельту изменения таблицы.
 instead of update
 as begin
 	if(update(Id))
