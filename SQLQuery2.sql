@@ -67,6 +67,8 @@ insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
 select * from EmployeeAudit
 
 --- peale kustutamist tekiks info EmployeeAudit tabelisse
+-- a triggers delete  data like delete from EmployeeTrigger where Id = 7
+-- when it was deleted
 create trigger EmployeeForDelete
 on EmployeeTrigger
 for delete
