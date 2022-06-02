@@ -50,7 +50,7 @@ select * from Person on tehtud
 
 --- võõrvõtme piirangu maha võtmine
 alter table Person
-drop constraint tblPerson_GenderId_FK
+drop constraint tblPerson_GenderId_FK on tehtud
 
 -- sisestame väärtuse tabelisse
 insert into Gender (Id, Gender)
