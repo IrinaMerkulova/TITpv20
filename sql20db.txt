@@ -43,7 +43,7 @@ values (5, 'Catwoman', 'c@c.com', 1)
 insert into Person (Id, Name, Email, GenderId)
 values (6, 'Antman', 'ant"ant.com', 2)
 insert into Person (Id, Name, Email, GenderId)
-values (7, 'Spiderman', 'spider@spiderman.com', 2)
+values (7, 'Spiderman', 'spider@spiderman.com', 2) on tehtud
 
 -- vaatame tabeli andmeid
 select * from Person
