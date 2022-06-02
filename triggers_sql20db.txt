@@ -98,7 +98,7 @@ end
 update EmployeeTrigger set Name = 'Todd', Salary = 2345,
 Gender = 'Male' where Id = 4
 
-
+*done
 --- teeme update triggeri korda
 create trigger trEmployeeForUpdate
 on EmployeeTrigger
