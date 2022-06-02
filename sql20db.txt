@@ -443,7 +443,7 @@ select * from EmployeeAudit
 --- after trigger
 -- kasutavad kahte tabelit, milleks on INSERTED ja DELETED
 
--- after trigger näide
+-- after trigger näide / tehtud
 create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
