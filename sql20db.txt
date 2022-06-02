@@ -1,4 +1,4 @@
-git CMD
+﻿git CMD
 
 git clone https://github.com/IrinaMerkulova/TITpv20
 cd TITpv20
@@ -16,15 +16,15 @@ git push
 -- db loomine
 create database TITpv20
 
--- db kustutamine
-DRop DataBASE Tarpe21
+-- db loomine
+use TITpv20g
 
 --- teeme tabeli  create a table Gender and Person
 create table Gender
 (
 Id int NOT NULL primary key,
 Gender nvarchar(10) not null
-)
+);
 
 create table Person
 (
@@ -32,43 +32,43 @@ Id int not null primary key,
 Name nvarchar(25),
 Email nvarchar(30),
 GenderId int
-)
+);
 
 --- andmete sisestamine tabelisse
 insert into Gender (Id, Gender)
-values (1, 'Female')
+values (1, 'Female');
 insert into Gender (Id, Gender)
-values (2, 'Male')
+values (2, 'Male');
 
 --- nüüd saab kasutada ainult Gender tabelis olevaid väärtuseid
 alter table Person add constraint tblPerson_GenderId_FK
-foreign key (GenderId) references Gender(Id)
+foreign key (GenderId) references Gender(Id);
 
 -- sisestame andmed
 insert into Person (Id, Name, Email, GenderId)
-values (1, 'Supermees', 's@s.com', 2)
+values (1, 'Supermees', 's@s.com', 2);
 insert into Person (Id, Name, Email, GenderId)
-values (2, 'Wonderwoman', 'w@w.com', 1)
+values (2, 'Wonderwoman', 'w@w.com', 1);
 insert into Person (Id, Name, Email, GenderId)
-values (3, 'Batman', 'b@b.com', 2)
+values (3, 'Batman', 'b@b.com', 2);
 insert into Person (Id, Name, Email, GenderId)
-values (4, 'Aquaman', 'a@a.com', 2)
+values (4, 'Aquaman', 'a@a.com', 2);
 insert into Person (Id, Name, Email, GenderId)
-values (5, 'Catwoman', 'c@c.com', 1)
+values (5, 'Catwoman', 'c@c.com', 1);
 insert into Person (Id, Name, Email, GenderId)
-values (6, 'Antman', 'ant"ant.com', 2)
+values (6, 'Antman', 'ant"ant.com', 2);
 insert into Person (Id, Name, Email, GenderId)
-values (7, 'Spiderman', 'spider@spiderman.com', 2)
+values (7, 'Spiderman', 'spider@spiderman.com', 2);
 
 -- vaatame tabeli andmeid
-select * from Person
+select * from Person;
 
 -- SAVE
 
 --- võõrvõtme piirangu maha võtmine
 --- delete link between m\y
 alter table Person
-drop constraint tblPerson_GenderId_FK
+drop constraint tblPerson_GenderId_FK;
 
 -- sisestame väärtuse tabelisse
 insert into Gender (Id, Gender)
@@ -83,6 +83,7 @@ default 3 for GenderId
 
 select * from Person
 select * from Gender
+
 
 insert into Person (Id, Name, Email)
 values (8, 'Test', 'Test')
@@ -416,7 +417,11 @@ select * from Employees
 
 -- after trigger:  käivitub peale mingit tegevust
 -- instead trigger: käivitub enne triggeri tegevuse toimumist
-create database TITpv22
+
+-- Create a new database
+create database TITpv22;
+
+use TITpv22;
 
 create table EmployeeTrigger
 (

@@ -54,11 +54,11 @@ drop constraint tblPerson_GenderId_FK;
 
 -- sisestame väärtuse tabelisse
 insert into Gender (Id, Gender)
-values (3, 'Unknown')
+values (3, 'Unknown');
 -- lisame võõrvõtme uuesti
 alter table Person
 add constraint DF_Person_GenderId
-default 3 for GenderId
+default 3 for GenderId;
 
 
 ---- 2 tund
@@ -71,19 +71,19 @@ values (8, 'Test', 'Test');
 
 ---lisame uue veeru tabelisse
 alter table Person
-add Age nvarchar(10)
+add Age nvarchar(10);
 
 --uuendame andmeid
 update Person
 set Age = 149
-where Id = 8
+where Id = 8;
 
 -- veerule piirnagu panemine
 alter table Person
 add constraint CK_Person_Age check (Age > 0 and Age < 150)
 
 insert into Person (Id, Name, Email, GenderId, Age)
-values (9, 'Test', 'Test', 2, 160)
+values (9, 'Test', 'Test', 2, 110)
 
 -- lisatid veerg vanus /age piiranguga check age > 0 and < 150
 --rea kustutamine
@@ -166,7 +166,7 @@ select City, sum(cast(Age as int)) as TotalAge from Person group by City
 
 
 --- tund 3
-Create Table Deparment and Employees
+--Create Table Deparment and Employees
 --- loome uued tabelid
 create table Department
 (
@@ -174,7 +174,7 @@ Id int primary key,
 DepartmentName nvarchar(50),
 Location nvarchar(50),
 DepartmentHead nvarchar(50)
-)
+);
 
 create table Employees
 (
@@ -183,7 +183,7 @@ Name nvarchar(50),
 Gender nvarchar(10),
 Salary nvarchar(50),
 DepartmentId int
-)
+);
 
 -- adding data to Deparment
 
