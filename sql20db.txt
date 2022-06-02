@@ -4,7 +4,7 @@ create database TITpv20
 -- db kustutamine *on tehtud
 DRop DataBASE TITpv20
 
---- teeme tabeli
+--- teeme tabeli * on tehtud
 create table Gender
 (
 Id int NOT NULL primary key,
