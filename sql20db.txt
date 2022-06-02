@@ -424,21 +424,21 @@
 -- select * from employeeaudit
 
 --- peale kustutamist tekiks info EmployeeAudit tabelisse
-create trigger EmployeeForDelete
-on EmployeeTrigger
-for delete
-as begin
-	declare @Id int
-	select @Id = Id from deleted
+-- create trigger employeefordelete
+-- on employeetrigger
+-- for delete
+-- as begin
+	-- declare @id int
+	-- select @id = id from deleted
 	
-	insert into EmployeeAudit
-	values('An existing employee with Id = ' + CAST(@Id as nvarchar(5))
-	+ ' is deleted at ' + cast(GETDATE()as nvarchar(20)))
-end
+	-- insert into employeeaudit
+	-- values('an existing employee with id = ' + cast(@id as nvarchar(5))
+	-- + ' is deleted at ' + cast(getdate()as nvarchar(20)))
+-- end
 
-delete from EmployeeTrigger where Id = 7
+-- delete from employeetrigger where id = 7
 
-select * from EmployeeAudit
+-- select * from employeeaudit
 
 --- after trigger
 -- kasutavad kahte tabelit, milleks on INSERTED ja DELETED
