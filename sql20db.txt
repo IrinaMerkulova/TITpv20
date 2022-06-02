@@ -407,21 +407,21 @@
 --- siis EmployeeAudit tabelisse tulevad andmed
 
 --trigger
-create trigger tr_Employee_ForInsert
-on EmployeeTrigger
-for insert
-as begin
-	declare @Id int
-	select @Id = Id from inserted
+-- create trigger tr_employee_forinsert
+-- on employeetrigger
+-- for insert
+-- as begin
+	-- declare @id int
+	-- select @id = id from inserted
 
-	insert into EmployeeAudit
-	values('New employee with Id = ' + cast(@Id as nvarchar(5)) 
-	+ ' is added at ' + cast(Getdate() as nvarchar(20)))
-end
+	-- insert into employeeaudit
+	-- values('new employee with id = ' + cast(@id as nvarchar(5)) 
+	-- + ' is added at ' + cast(getdate() as nvarchar(20)))
+-- end
 
-insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
+-- insert into employeetrigger values(7, 'jimmy', 1800, 'male', 3)
 
-select * from EmployeeAudit
+-- select * from employeeaudit
 
 --- peale kustutamist tekiks info EmployeeAudit tabelisse
 create trigger EmployeeForDelete
