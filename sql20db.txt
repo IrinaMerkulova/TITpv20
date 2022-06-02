@@ -992,17 +992,17 @@ where Id = 1
 
 --- delete trigger
 
-create trigger trEmployeeDetails_InsteadOfDelete
-on vEmployeeDetails
-instead of delete
-as begin
-	delete EmployeeTrigger
-	from EmployeeTrigger
-	join deleted
-	on EmployeeTrigger.Id = deleted.Id
-end
+-- create trigger trEmployeeDetails_InsteadOfDelete
+-- on vEmployeeDetails
+-- instead of delete
+-- as begin
+	-- delete EmployeeTrigger
+	-- from EmployeeTrigger
+	-- join deleted
+	-- on EmployeeTrigger.Id = deleted.Id
+-- end
 
-delete from vEmployeeDetails where Id = 2
+-- delete from vEmployeeDetails where Id = 2
 --- kui seda triggerit ei oleks, siis annaks veateate
 
 
