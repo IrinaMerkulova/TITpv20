@@ -94,7 +94,7 @@ select * from Person on tehtud
 
 --- lisame veeru juurde
 alter table Person
-add City nvarchar(25)
+add City nvarchar(25) on tehtud
 
 -- tahame tead kõiki, kes elavad Gothami linnas 
 select * from Person where City = 'Gotham'
@@ -173,7 +173,7 @@ Id int primary key,
 DepartmentName nvarchar(50),
 Location nvarchar(50),
 DepartmentHead nvarchar(50)
-)
+) on tehtud
 
 create table Employees
 (
