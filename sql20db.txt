@@ -588,21 +588,12 @@ select * from EmployeeTrigger     tehtud*
 update EmployeeTrigger set Name = 'Todd123', Salary = 3456,
 Gender = 'Female', DepartmentId = 3 
 where Id = 4
-                                          * tehtud
+                                          * ei, ikka kustutasin old tabel, ja loon uus
 select * from EmployeeTrigger
 select * from EmployeeAudit
 
 
--- create table Department
--- (
--- Id int primary key,
--- DeptName nvarchar(20)
--- )
-																		* see oli juba tehtud
--- insert into Department values(1, 'IT')
--- insert into Department values(2, 'Payroll')
--- insert into Department values(3, 'HR')
--- insert into Department values(4, 'Admin')
+
 
 
 -- enne triggeri tegemist tuleb teha vaade
