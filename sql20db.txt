@@ -121,7 +121,7 @@ select * from Person where Email not like '%@%'
 -- ainult üks täht
 select * from Person where Email like '_@_.com'
 
---- kõik, kellel ei ole nimes esimene täht W, A ja S
+--- kõik, kellel ei ole nimes esimene täht W, A ja S *on tehtud
 select * from Person where Name like '[^WAS]%'
 
 --- kes elavad Gothamis ja New Yorkis
