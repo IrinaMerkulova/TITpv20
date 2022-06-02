@@ -478,7 +478,7 @@ as begin
 	select @Id = Id from inserted
 
 	insert into EmployeeAudit
-	values('New employee with Id = ' + cast(@Id as nvarchar(5)) 
+	values('New employee with Id = ' + cast(@Id as nvarchar(5))  * tegin uus triger
 	+ ' is added at ' + cast(Getdate() as nvarchar(20)))
 end
 
