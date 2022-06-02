@@ -10,4 +10,4 @@ as begin
 	+ ' is deleted at ' + cast(GETDATE()as nvarchar(20)))
 end
 
---Добавляет запись о удалении данных в таблицу EmployeeAudit
+--Добавляет запись об удалении данных в таблицу EmployeeAudit
