@@ -729,7 +729,7 @@ instead of delete
 as begin
 	delete EmployeeTrigger
 	from EmployeeTrigger
-	join deleted
+	join deleted                          * tehtud
 	on EmployeeTrigger.Id = deleted.Id
 end
 
