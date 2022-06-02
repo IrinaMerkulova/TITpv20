@@ -71,7 +71,7 @@ values (8, 'Test', 'Test') on tehtud
 
 ---lisame uue veeru tabelisse
 alter table Person
-add Age nvarchar(10)
+add Age nvarchar(10) on tehtud
 
 --uuendame andmeid
 update Person
