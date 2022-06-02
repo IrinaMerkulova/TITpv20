@@ -612,7 +612,7 @@ update vEmployeeDetails
 set DepartmenName = 'Payroll'
 where Id = 2
 
---- teeme vaate
+--- teeme vaate  / tehtud
 alter view vEmployeeDetailsUpdate
 as
 select EmployeeTrigger.Id, Name, Salary, Gender, DeptName
