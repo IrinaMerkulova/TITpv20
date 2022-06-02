@@ -689,7 +689,7 @@ where Id = 1
 
 --- delete trigger
 
-create trigger trEmployeeDetails_InsteadOfDelete
+create trigger trEmployeeDetails_InsteadOfDelete -- tehtud
 on vEmployeeDetails
 instead of delete
 as begin
