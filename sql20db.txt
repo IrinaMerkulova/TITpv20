@@ -429,7 +429,9 @@ AuditData nvarchar(1000)
 --- nüüd teeme triggeri, et kui sisestan uue töötaja EmployeeTrigger tabelisse,
 --- siis EmployeeAudit tabelisse tulevad andmed
 
---trigger
+--trigger triggeri, et kui sisestan uue töötaja EmployeeTrigger tabelisse,
+--- siis EmployeeAudit tabelisse tulevad andmed
+
 create trigger tr_Employee_ForInsert
 on EmployeeTrigger
 for insert
@@ -447,6 +449,7 @@ insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
 select * from EmployeeAudit
 
 --- peale kustutamist tekiks info EmployeeAudit tabelisse
+--- teave kuvatakse pärast kustutamist audititabelis
 create trigger EmployeeForDelete
 on EmployeeTrigger
 for delete
@@ -467,6 +470,7 @@ select * from EmployeeAudit
 -- kasutavad kahte tabelit, milleks on INSERTED ja DELETED
 
 -- after trigger näide
+-- kasutavad kahte tabelit, milleks on INSERTED ja DELETED
 create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
@@ -480,10 +484,13 @@ Gender = 'Male' where Id = 4
 
 
 --- teeme update triggeri korda
+--- trigger for update
+--update trigger
 create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
 as begin
+end
 	-- deklareerisime muutujad, mida hakkame kasutama
 	Declare @Id int
 	declare @OldName nvarchar(30), @NewName nvarchar(30)
