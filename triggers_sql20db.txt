@@ -59,6 +59,7 @@ as begin
 	+ ' is added at ' + cast(Getdate() as nvarchar(20)))
 end
 
+*done inserted new employee
 insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
 
 select * from EmployeeAudit
