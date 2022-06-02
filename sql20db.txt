@@ -293,7 +293,10 @@ add DepartmentId
 int null
 
 
+
 --- lisame tabelid
+**added middle name and last name
+
 alter table Employees
 add MiddleName nvarchar(30)
 
