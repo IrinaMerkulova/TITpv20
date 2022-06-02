@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -- -- -- db loomine
 -- -- create database tarpe21
 
@@ -20,12 +21,63 @@
 -- )
 
 -- --- andmete sisestamine tabelisse
+=======
+git CMD
+
+git config -- global user.name "Daanel Dederer"
+git config --global user.email "daaneldederer@gmail.com"
+git config --global --list
+git clone https://github.com/IrinaMerkulova/TITpv20
+cd TITpv20
+git branch DaanelD
+git checkout DaanelD
+git status
+
+git push --set-upstream origin DaanelD
+
+
+git add .
+git commit -a -m "git commands are added"
+
+git push 
+
+
+
+
+
+-- db loomine
+--create database TiTpv20
+
+-- db kustutamine
+--DRop DataBASE TiTpv20
+
+--- teeme tabeli sugu ja isik
+--create table Gender
+--(
+--Id int NOT NULL primary key,
+--Gender nvarchar(10) not null
+--)
+
+--create table Person
+--(
+--Id int not null primary key,
+--Name nvarchar(25),
+--Email nvarchar(30),
+--GenderId int
+--)
+
+--- andmete sisestamine tabelisse
+>>>>>>> a8faca78e5c804e191c7f0e72aa24f7ad4084be1
 -- insert into gender (id, gender)
 -- values (1, 'female')
 -- insert into gender (id, gender)
 -- values (2, 'male')
 
+<<<<<<< HEAD
 -- --- nüüd saab kasutada ainult gender tabelis olevaid väärtuseid
+=======
+--- nüüd saab kasutada ainult Gender tabelis olevaid väärtuseid
+>>>>>>> a8faca78e5c804e191c7f0e72aa24f7ad4084be1
 -- alter table person add constraint tblperson_genderid_fk
 -- foreign key (genderid) references gender(id)
 
@@ -45,6 +97,7 @@
 -- insert into person (id, name, email, genderid)
 -- values (7, 'spiderman', 'spider@spiderman.com', 2)
 
+<<<<<<< HEAD
 -- -- vaatame tabeli andmeid
 -- select * from person
 
@@ -56,12 +109,31 @@
 -- insert into gender (id, gender)
 -- values (3, 'unknown')
 -- -- lisame võõrvõtme uuesti
+=======
+-- vaatame tabeli andmeid
+-- select * from person
+
+-- * tabelid on täidetud andmetega
+
+--- võõrvõtme piirangu maha võtmine
+-- alter table person
+-- drop constraint tblperson_genderid_fk
+
+-- sisestame väärtuse tabelisse
+-- insert into gender (id, gender)
+-- values (3, 'unknown')
+-- lisame võõrvõtme uuesti
+>>>>>>> a8faca78e5c804e191c7f0e72aa24f7ad4084be1
 -- alter table person
 -- add constraint df_person_genderid
 -- default 3 for genderid
 
 
+<<<<<<< HEAD
 -- ---- 2 tund
+=======
+---- 2 tund
+>>>>>>> a8faca78e5c804e191c7f0e72aa24f7ad4084be1
 
 -- select * from person
 -- select * from gender
@@ -69,11 +141,19 @@
 -- insert into person (id, name, email)
 -- values (8, 'test', 'test')
 
+<<<<<<< HEAD
 -- ---lisame uue veeru tabelisse
 -- alter table person
 -- add age nvarchar(10)
 
 -- --uuendame andmeid
+=======
+---lisame uue veeru tabelisse
+-- alter table person
+-- add age nvarchar(10)
+
+--uuendame andmeid
+>>>>>>> a8faca78e5c804e191c7f0e72aa24f7ad4084be1
 -- update person
 -- set age = 149
 -- where id = 8
@@ -85,13 +165,18 @@
 -- insert into person (id, name, email, genderid, age)
 -- values (9, 'test', 'test', 2, 160)
 
+<<<<<<< HEAD
 -- --rea kustutamine
+=======
+--rea kustutamine
+>>>>>>> a8faca78e5c804e191c7f0e72aa24f7ad4084be1
 -- select * from person
 -- go
 -- delete from person where id = 8
 -- go
 -- select * from person
 
+<<<<<<< HEAD
 -- --- lisame veeru juurde
 -- alter table person
 -- add city nvarchar(25)
@@ -99,6 +184,15 @@
 -- -- tahame tead kõiki, kes elavad gothami linnas 
 -- select * from person where city = 'gotham'
 -- -- kõik, kes ei ela gothamis
+=======
+--- lisame veeru juurde
+-- alter table person
+-- add city nvarchar(25)
+
+-- tahame tead kõiki, kes elavad Gothami linnas 
+-- select * from person where city = 'gotham'
+-- kõik, kes ei ela Gothamis
+>>>>>>> a8faca78e5c804e191c7f0e72aa24f7ad4084be1
 -- select * from person where city <> 'gotham'
 -- select * from person where city != 'gotham'
 
@@ -138,6 +232,7 @@
 
 -- ---võtab kolm esimest rida
 -- select top 3 * from person
+<<<<<<< HEAD
 
 -- --- kolm esimest, aga tabeli järjestus on age ja siis name
 -- select * from person
@@ -363,6 +458,235 @@
 -- select * from employees
 
 -- --tund 4 --- trigger
+=======
+
+-- --- kolm esimest, aga tabeli järjestus on age ja siis name
+-- select * from person
+-- select top 3 age, name from person
+
+-- --- näitab esimesed 50% tabelis
+-- select top 50 percent * from person
+
+-- -- järjestab vanuse järgi isikud
+-- select * from person order by cast(age as int)
+-- select * from person order by age
+
+-- -- kõikide isikute koondvanus
+-- select sum(cast(age as int)) from person
+
+-- --- kuvab kõige nooremat isikut
+-- select min(cast(age as int)) from person
+-- --- kõige vanem isik
+-- select max(cast(age as int)) from person
+
+-- select city, sum(cast(age as int)) as totalage from person group by city
+
+
+
+--kõik select'id on tehtud
+
+--- tund 3
+
+--- loome uued tabelid
+-- create table department
+-- (
+-- id int primary key,
+-- departmentname nvarchar(50),
+-- location nvarchar(50),
+-- departmenthead nvarchar(50)
+-- )
+
+-- create table employees
+-- (
+-- id int primary key,
+-- name nvarchar(50),
+-- gender nvarchar(10),
+-- salary nvarchar(50),
+-- departmentid int
+-- )
+
+---sisestame andmed
+-- insert into department (id, departmentname, location, departmenthead)
+-- values (1, 'it', 'london', 'rick')
+-- insert into department (id, departmentname, location, departmenthead)
+-- values (2, 'payroll', 'delhi', 'ron')
+-- insert into department (id, departmentname, location, departmenthead)
+-- values (3, 'hr', 'new york', 'christie')
+-- insert into department (id, departmentname, location, departmenthead)
+-- values (4, 'other deparment', 'sydney', 'cindrella')
+
+-- select * from department
+
+-- insert into employees (id, name, gender, salary, departmentid)
+-- values (1, 'tom', 'male', 4000, 1)
+-- insert into employees (id, name, gender, salary, departmentid)
+-- values (2, 'pam', 'female', 3000, 1)
+-- insert into employees (id, name, gender, salary, departmentid)
+-- values (3, 'john', 'male', 3500, 1)
+-- insert into employees (id, name, gender, salary, departmentid)
+-- values (4, 'sam', 'male', 4500, 2)
+-- insert into employees (id, name, gender, salary, departmentid)
+-- values (5, 'todd', 'male', 2800, 1)
+-- insert into employees (id, name, gender, salary, departmentid)
+-- values (6, 'ben', 'male', 7000, 1)
+-- insert into employees (id, name, gender, salary, departmentid)
+-- values (7, 'sara', 'female', 4800, 3)
+-- insert into employees (id, name, gender, salary, departmentid)
+-- values (8, 'valarie', 'female', 5500, 1)
+-- insert into employees (id, name, gender, salary, departmentid)
+-- values (9, 'james', 'male', 6500, null)
+-- insert into employees (id, name, gender, salary, departmentid)
+-- values (10, 'russell', 'male', 8800, null)
+
+-- select * from employees
+
+-- andmed on lisatud tabelitesse "employees" ja "department"
+
+--- saan ainult selles tabelis olevad veerud
+-- select distinct name, departmentid from employees
+
+-- --- arvutame k]ikide palgad kokku
+-- select sum(cast(salary as int)) from employees
+-- --- k]ige v'iksema palga saaja
+-- select min(cast(salary as int)) from employees
+
+
+-- alter table employees
+-- add city nvarchar(25)
+
+
+-- alter table employees
+-- add departmentid
+-- int null
+
+
+--- lisame tabelid
+-- alter table employees
+-- add middlename nvarchar(30)
+
+-- alter table employees
+-- add lastname nvarchar(30)
+
+-- update employees set firstname = 'tom', middlename = 'nick', lastname = 'jones'
+-- where id = 1
+-- update employees set firstname = 'pam', middlename = null, lastname = 'anderson'
+-- where id = 2
+-- update employees set firstname = 'john', middlename = null, lastname = null
+-- where id = 3
+-- update employees set firstname = 'sam', middlename = null, lastname = 'smith'
+-- where id = 4
+-- update employees set firstname = null, middlename = 'todd', lastname = 'someone'
+-- where id = 5
+-- update employees set firstname = 'ben', middlename = 'ten', lastname = 'sven'
+-- where id = 6
+-- update employees set firstname = 'sara', middlename = null, lastname = 'connor'
+-- where id = 7
+-- update employees set firstname = 'valarie', middlename = 'balerine', lastname = null
+-- where id = 8
+-- update employees set firstname = 'james', middlename = '007', lastname = 'bond'
+-- where id = 9
+-- update employees set firstname = null, middlename = null, lastname = 'crowe'
+-- where id = 10
+
+
+--- igast reast võtab esimeses veerus täidetud lahtri ja kuvab ainult seda
+-- select id, coalesce(name, middlename, lastname) as name
+-- from employees
+
+-- select * from employees
+-- select * from department
+
+
+--tund 3 on tehtud
+ 
+
+--- loome stored procedure, mis kuvab vaate 
+-- create procedure spgetemployees
+-- as begin
+	-- select firstname, gender from employees
+-- end
+ 
+-- spgetemployees
+-- exec spgetemployees 
+-- execute spgetemployees
+
+--- 
+-- create proc spgetemployeesbygenderanddepartment
+-- @gender nvarchar(20),
+-- @departmentid int
+-- as begin
+	-- select firstname, gender, departmentid from employees where gender = @gender
+	-- and departmentid = @departmentid
+-- end
+
+--- kõik esimeses osakonnas meessoost töötavad isikud
+-- spgetemployeesbygenderanddepartment 'male', 1
+
+-- spgetemployeesbygenderanddepartment @departmentid =  1, @gender = 'male'
+
+  
+ 
+
+-- create proc spgetemployeecountbygender
+-- @gender nvarchar(20),
+-- @employeecount int output
+-- as begin
+	-- select @employeecount = count(id) from employees where gender = @gender
+-- end
+
+-- annab teada, palju on meessoost isikuid ning kuvab vastava stringi
+-- declare @totalcount int
+-- exec spgetemployeecountbygender 'female', @totalcount out
+-- if(@totalcount = 0)
+	-- print '@totalcount is null'
+-- else
+	-- print '@totalcount is not null'
+-- print @totalcount
+
+-- annab teada, palju on meessoost isikuid
+-- declare @totalcount int
+-- exec spgetemployeecountbygender @employeecount = @totalcount out, @gender = 'male'
+-- print @totalcount
+
+---- annab kogu tabeli ridade arvu
+-- create proc sptotalcount2
+-- @totalcount int output
+-- as begin
+	-- select @totalcount = count(id) from employees
+-- end
+--- käivitame sp
+-- declare @totalemployees int
+-- execute sptotalcount2 @totalemployees output
+-- select @totalemployees
+
+--- mis id all on keegi nime järgi
+-- create proc spgetnamebyid1
+-- @id int,
+-- @firstname nvarchar(50) output
+-- as begin
+	-- select @firstname = firstname from employees where id = @id
+-- end
+
+--- käivitame sp
+-- declare @firstname nvarchar(50)
+-- execute spgetnamebyid1 6, @firstname output
+-- print 'name of the employee = ' + @firstname
+
+
+-- create proc spgetnamebyid2
+-- @id int
+-- as begin
+	-- return (select firstname from employees where id = @id)
+-- end
+-- tuleb veatead kuna kutsusime välja int-i, aga Tom on string
+-- declare @employeename nvarchar(50)
+-- exec @employeename = spgetnamebyid2 1
+-- print 'name of the employee = ' + @employeename
+
+-- select * from employees
+
+--tund 4 --- trigger
+>>>>>>> a8faca78e5c804e191c7f0e72aa24f7ad4084be1
 
 -- triggereid on kolme tüüpi
 --1. DML trigger
@@ -541,7 +865,7 @@
 -- insert into department values(4, 'admin')
 
 
--- enne triggeri tegemist tuleb teha vaade
+-- enne triggeri tegemist tuleb teha vaade 
 create view vEmployeeDetails
 as
 select EmployeeTrigger.Id, Name, Gender, DeptName
