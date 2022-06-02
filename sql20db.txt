@@ -581,7 +581,9 @@ on EmployeeTrigger.DepartmentId = Department.Id
 
 
 
+
 ---- instead of insert trigger
+
 create trigger trEmployeeDetailsInsteadOfInsert
 on vEmployeeDetails
 instead of insert
