@@ -323,7 +323,7 @@ print @TotalCount on tehtud
 -- annab teada, palju on meessoost isikuid
 declare @TotalCount int
 exec spGetEmployeeCountByGender @EmployeeCount = @TotalCount out, @Gender = 'Male'
-print @TotalCount
+print @TotalCount on tehtud
 
 ---- annab kogu tabeli ridade arvu
 create proc spTotalCount2
