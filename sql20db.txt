@@ -866,12 +866,12 @@ git push
 
 
 -- enne triggeri tegemist tuleb teha vaade   
-create view vEmployeeDetails
-as
-select EmployeeTrigger.Id, Name, Gender, DeptName
-from EmployeeTrigger
-join Department
-on EmployeeTrigger.DepartmentId = Department.Id
+-- create view vemployeedetails
+-- as
+-- select employeetrigger.id, name, gender, deptname
+-- from employeetrigger
+-- join department
+-- on employeetrigger.departmentid = department.id
 
 
 
