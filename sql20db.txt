@@ -96,18 +96,18 @@ select * from Person
 alter table Person
 add City nvarchar(25)
 
--- tahame tead kõiki, kes elavad Gothami linnas 
+-- tahame tead kõiki, kes elavad Gothami linnas on tehtud
 select * from Person where City = 'Gotham'
--- kõik, kes ei ela Gothamis
+-- kõik, kes ei ela Gothamis on tehtud
 select * from Person where City <> 'Gotham'
 select * from Person where City != 'Gotham'
 
--- näitab teatud vanusega inimesi
+-- näitab teatud vanusega inimesi on tehtud
 select *from Person where Age = 100 or 
 Age = 50 or Age = 20
 select * from Person where Age in (100, 50, 20)
 
---- näitab teatud vanusevahemikus olevaid inimesi
+--- näitab teatud vanusevahemikus olevaid inimesi on tehtud
 select * from Person where Age between 30 and 50
 
 --- wildcard e näitab kõik g-tähega linnad
