@@ -15,6 +15,7 @@
 -- instead trigger: käivitub enne triggeri tegevuse toimumist
 create database TITpv22
 
+*done
 create table EmployeeTrigger
 (
 Id int primary key,
