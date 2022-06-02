@@ -93,6 +93,7 @@ set Age = 149
 where Id = 8
 
 -- veerule piirnagu panemine
+**added new constraint
 alter table Person
 add constraint CK_Person_Age check (Age > 0 and Age < 150)
 
