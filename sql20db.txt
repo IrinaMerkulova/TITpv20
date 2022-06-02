@@ -499,7 +499,7 @@ Gender = 'Male' where Id = 4
 
 
 --- teeme update triggeri korda
-create trigger trEmployeeForUpdate
+create trigger trEmployeeForUpdate2 *создаем второй триггер update
 on EmployeeTrigger
 for update
 as begin
@@ -563,7 +563,7 @@ end
 
 select * from EmployeeTrigger
 
-update EmployeeTrigger set Name = 'Todd123', Salary = 3456,
+update EmployeeTrigger set Name = 'Todd123', Salary = 3456,  *вызываем update
 Gender = 'Female', DepartmentId = 3 
 where Id = 4
 
