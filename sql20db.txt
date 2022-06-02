@@ -549,7 +549,7 @@ from EmployeeTrigger
 join Department
 on EmployeeTrigger.DepartmentId = Department.Id
 
-
+on tehtud
 
 ---- instead of insert trigger
 create trigger trEmployeeDetailsInsteadOfInsert
