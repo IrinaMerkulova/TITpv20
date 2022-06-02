@@ -542,6 +542,7 @@ Gender = 'Male' where Id = 4
 
 
 --- teeme update triggeri korda
+* делается обновление тригера на повторение
 -- create trigger trEmployeeForUpdate
 -- on EmployeeTrigger    
 -- for update
