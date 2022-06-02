@@ -907,8 +907,8 @@ git push
 
 -- delete from employeetrigger where id = 7
 --- 10 tund SQL
-select * from EmployeeTrigger
-select * from vEmployeeDetails
+-- select * from employeetrigger
+-- select * from vemployeedetails
 
 
 update vEmployeeDetails
