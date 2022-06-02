@@ -572,7 +572,7 @@ as begin
 	insert into EmployeeTrigger(Id, Name, Gender, DepartmentId)
 	select Id, Name, Gender, @DeptId
 	from inserted
-end
+end on tehtud
 --- raiserror funktsioon
 -- selle eesmärk on välja tuua veateade, kui DepartmentName veerus ei ole väärtust
 -- ja ei ühti sisestatud väärtusega
