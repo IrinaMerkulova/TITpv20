@@ -115,12 +115,15 @@ add City nvarchar(25)
 
 -- tahame tead kõiki, kes elavad Gothami linnas 
 **ive checked add tables where are cities gotham
+
 select * from Person where City = 'Gotham'
 -- kõik, kes ei ela Gothamis
 select * from Person where City <> 'Gotham'
 select * from Person where City != 'Gotham'
 
 -- näitab teatud vanusega inimesi
+**checked in table person with age 100 or 50
+
 select *from Person where Age = 100 or 
 Age = 50 or Age = 20
 select * from Person where Age in (100, 50, 20)
