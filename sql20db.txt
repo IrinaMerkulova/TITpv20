@@ -453,7 +453,7 @@ as begin
 end
 
 update EmployeeTrigger set Name = 'Todd', Salary = 2345,
-Gender = 'Male' where Id = 4
+Gender = 'Male' where Id = 4 on tehtud
 
 
 --- teeme update triggeri korda
@@ -517,7 +517,7 @@ as begin
 		-- kustutab kogu info temp table-st
 		delete from #TempTable where Id = @Id
 	end
-end
+end on tehtud
 
 select * from EmployeeTrigger
 
