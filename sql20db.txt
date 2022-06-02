@@ -486,7 +486,7 @@ select * from EmployeeAudit
 -- kasutavad kahte tabelit, milleks on INSERTED ja DELETED
 
 -- after trigger näide
-create trigger trEmployeeForUpdate
+create trigger trEmployeeForUpdate       *создаем триггер trEmployeeForUpdate и выполняем его (update)
 on EmployeeTrigger
 for update
 as begin
