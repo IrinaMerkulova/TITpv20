@@ -572,7 +572,7 @@ on EmployeeTrigger.DepartmentId = Department.Id
 
 
 
----- instead of insert trigger
+---- instead of insert trigger /tehtud
 create trigger trEmployeeDetailsInsteadOfInsert
 on vEmployeeDetails
 instead of insert
