@@ -110,33 +110,33 @@ select * from Person where Age in (100, 50, 20)
 --- näitab teatud vanusevahemikus olevaid inimesi on tehtud
 select * from Person where Age between 30 and 50
 
---- wildcard e näitab kõik g-tähega linnad
+--- wildcard e näitab kõik g-tähega linnad on tehtud
 select * from Person where City like 'n%'
 select * from Person where Email like '%@%'
 
--- n'itab kõiki, kellel ei ole @-märki emailis
+-- n'itab kõiki, kellel ei ole @-märki emailis on tehtud
 select * from Person where Email not like '%@%'
 
---- näitab, kelle on emailis ees ja peale @-märki
+--- näitab, kelle on emailis ees ja peale @-märki on tehtud
 -- ainult üks täht
 select * from Person where Email like '_@_.com'
 
---- kõik, kellel ei ole nimes esimene täht W, A ja S
+--- kõik, kellel ei ole nimes esimene täht W, A ja S on tehtud
 select * from Person where Name like '[^WAS]%'
 
---- kes elavad Gothamis ja New Yorkis
+--- kes elavad Gothamis ja New Yorkis on tehtud
 select * from Person where (City = 'Gotham' or City = 'New York')
 
---- kõik, kes elevad välja toodud linnades ja on vanemad kui 40 a
+--- kõik, kes elevad välja toodud linnades ja on vanemad kui 40 a on tehtud
 select * from Person where (City = 'Gotham' or City = 'New York')
 and Age >= 40
 
--- kuvab tähestikulises järjekorras inimesi ja võtab aluseks Name veeru
+-- kuvab tähestikulises järjekorras inimesi ja võtab aluseks Name veeru on tehtud
 select * from Person order by Name
---- kuva vastupidises järjestuses
+--- kuva vastupidises järjestuses on tehtud
 select * from Person order by Name desc
 
----võtab kolm esimest rida
+---võtab kolm esimest rida on tehtud
 select top 3 * from Person
 
 --- kolm esimest, aga tabeli järjestus on Age ja siis Name
