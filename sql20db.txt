@@ -2,14 +2,14 @@
 create database titpv20 on tehtud
 
 -- db kustutamine
-DRop DataBASE Tarpe21
+DRop DataBASE titpv20 
 
 --- teeme tabeli
 create table Gender
 (
 Id int NOT NULL primary key,
 Gender nvarchar(10) not null
-)
+) 
 
 create table Person
 (
@@ -17,7 +17,7 @@ Id int not null primary key,
 Name nvarchar(25),
 Email nvarchar(30),
 GenderId int
-)
+) on tehtud
 
 --- andmete sisestamine tabelisse
 insert into Gender (Id, Gender)
