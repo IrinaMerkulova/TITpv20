@@ -173,6 +173,7 @@ select * from Person order by Name
 select * from Person order by Name desc
 
 ---võtab kolm esimest rida
+**checked top 3 persons
 select top 3 * from Person
 
 --- kolm esimest, aga tabeli järjestus on Age ja siis Name
