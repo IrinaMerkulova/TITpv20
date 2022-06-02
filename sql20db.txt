@@ -601,7 +601,7 @@ on EmployeeTrigger.DepartmentId = Department.Id
 
 select * from vEmployeeDetailsUpdate
 update EmployeeTrigger set DepartmentId = 4
-where Id = 4
+where Id = 4 on tehtud
 
 --- loome triggeri
 alter trigger trEmployeeDetailsInsteadOfUpdate
@@ -657,7 +657,7 @@ as begin
 		join EmployeeTrigger
 		on EmployeeTrigger.Id = inserted.Id
 	end
-end
+end on tehtud
 
 select * from EmployeeTrigger
 
