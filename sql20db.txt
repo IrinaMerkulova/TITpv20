@@ -46,7 +46,7 @@ insert into Person (Id, Name, Email, GenderId)
 values (7, 'Spiderman', 'spider@spiderman.com', 2) on tehtud
 
 -- vaatame tabeli andmeid
-select * from Person
+select * from Person on tehtud
 
 --- võõrvõtme piirangu maha võtmine
 alter table Person
