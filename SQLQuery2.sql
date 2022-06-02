@@ -103,7 +103,8 @@ Gender = 'Male' where Id = 4
 
 
 --- teeme update triggeri korda
-create trigger trEmployeeForUpdate
+-- update data from databases tables
+create trigger trEmployeeForUpdate1
 on EmployeeTrigger
 for update
 as begin
@@ -166,7 +167,7 @@ as begin
 end
 
 select * from EmployeeTrigger
-
+-- changes someone who has id of 4 to Todd123 changes their gender and pay
 update EmployeeTrigger set Name = 'Todd123', Salary = 3456,
 Gender = 'Female', DepartmentId = 3 
 where Id = 4
