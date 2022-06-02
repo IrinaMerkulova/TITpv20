@@ -285,7 +285,7 @@ end
 
 spGetEmployees
 exec spGetEmployees
-execute spGetEmployees
+execute spGetEmployees on tehtud
 
 --- 
 create proc spGetEmployeesByGenderAndDepartment
