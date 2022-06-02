@@ -423,7 +423,7 @@ insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
 
 select * from EmployeeAudit
 
---- peale kustutamist tekiks info EmployeeAudit tabelisse
+--- peale kustutamist tekiks info EmployeeAudit tabelisse on tehtud
 create trigger EmployeeForDelete
 on EmployeeTrigger
 for delete
@@ -579,6 +579,7 @@ end
 -- esimene parameeter on veateate sisu, teiene on veatase (nr 16 tähendab üldiseid vigu),
 -- kolmas on veaolek
 
+-----------------------------------------------
 insert into vEmployeeDetails values(7, 'Valarie', 'Female', 'assd')
 
 delete from EmployeeTrigger where Id = 7
@@ -592,20 +593,20 @@ set DeptName = 'Payroll'
 where Id = 2
 
 --- teeme vaate
-alter view vEmployeeDetailsUpdate
+alter view vEmployeeDetails
 as
 select EmployeeTrigger.Id, Name, Salary, Gender, DeptName
 from EmployeeTrigger
 join Department
 on EmployeeTrigger.DepartmentId = Department.Id
 
-select * from vEmployeeDetailsUpdate
+select * from vEmployeeDetails
 update EmployeeTrigger set DepartmentId = 4
 where Id = 4
-
+-----------------------------------------------------------------
 --- loome triggeri
 alter trigger trEmployeeDetailsInsteadOfUpdate
-on vEmployeeDetailsUpdate
+on vEmployeeDetails
 instead of update
 as begin
 	if(update(Id))
