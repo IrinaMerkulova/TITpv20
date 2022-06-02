@@ -18,4 +18,5 @@ as begin
 	insert into EmployeeTrigger(Id, Name, Gender, DepartmentId)
 	select Id, Name, Gender, @DeptId
 	from inserted
+	-- Аудит добавления сотрудника и выборка аудита.
 end

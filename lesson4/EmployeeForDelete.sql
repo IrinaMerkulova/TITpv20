@@ -1,5 +1,5 @@
 create trigger trEmployeeForUpdate2
-on EmployeeTrigger
+on EmployeeTrigger -- Detailed audit log for Employee on delete
 for update
 as begin
 	-- deklareerisime muutujad, mida hakkame kasutama
