@@ -334,7 +334,7 @@ end on tehtud
 --- käivitame sp
 declare @TotalEmployees int
 execute spTotalCount2 @TotalEmployees output
-select @TotalEmployees
+select @TotalEmployees on tehtud
 
 --- mis id all on keegi nime järgi
 create proc spGetNameById1
