@@ -296,7 +296,7 @@ as begin
 	and DepartmentId = @DepartmentId
 end
 
---- kõik esimeses osakonnas meessoost töötavad isikud
+--- kõik esimeses osakonnas meessoost töötavad isikud *on tehtud
 spGetEmployeesByGenderAndDepartment 'Male', 1
 
 spGetEmployeesByGenderAndDepartment @DepartmentId =  1, @Gender = 'Male'
@@ -311,7 +311,7 @@ as begin
 	select @EmployeeCount = count(Id) from Employees where Gender = @Gender
 end
 
--- annab teada, palju on meessoost isikuid ning kuvab vastava stringi
+-- annab teada, palju on meessoost isikuid ning kuvab vastava stringi *on tehtud
 declare @TotalCount int
 exec spGetEmployeeCountByGender 'Female', @TotalCount out
 if(@TotalCount = 0)
@@ -320,18 +320,18 @@ else
 	print '@TotalCount is not null'
 print @TotalCount
 
--- annab teada, palju on meessoost isikuid
+-- annab teada, palju on meessoost isikuid *on tehtud
 declare @TotalCount int
 exec spGetEmployeeCountByGender @EmployeeCount = @TotalCount out, @Gender = 'Male'
 print @TotalCount
 
----- annab kogu tabeli ridade arvu
+---- annab kogu tabeli ridade arvu  *on tehtud
 create proc spTotalCount2
 @TotalCount int output
 as begin
 	select @TotalCount = count(Id) from Employees
 end
---- käivitame sp
+--- käivitame sp  *on tehtud
 declare @TotalEmployees int
 execute spTotalCount2 @TotalEmployees output
 select @TotalEmployees
