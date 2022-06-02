@@ -702,6 +702,7 @@ where Id = 1
 
 
 --- delete trigger
+--- создаем триггер на удаление
 
 create trigger trEmployeeDetails_InsteadOfDelete
 on vEmployeeDetails
