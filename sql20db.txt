@@ -166,7 +166,10 @@ and Age >= 40
 
 *checked persons with sorting by name
 select * from Person order by Name
+
 --- kuva vastupidises järjestuses
+**checked person name with sorting by name desc
+
 select * from Person order by Name desc
 
 ---võtab kolm esimest rida
