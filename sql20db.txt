@@ -63,6 +63,7 @@ alter table Person
 drop constraint tblPerson_GenderId_FK
 
 -- sisestame väärtuse tabelisse
+**i inserted some values into gender table
 insert into Gender (Id, Gender)
 values (3, 'Unknown')
 -- lisame võõrvõtme uuesti
