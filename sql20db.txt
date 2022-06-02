@@ -590,7 +590,7 @@ select * from vEmployeeDetails
 update vEmployeeDetails
 set DeptName = 'Payroll'
 where Id = 2
-
+ on tehtud
 --- teeme vaate
 alter view vEmployeeDetailsUpdate
 as
