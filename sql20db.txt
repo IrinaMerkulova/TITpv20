@@ -916,16 +916,16 @@ git push
 -- where id = 2
 
 --- teeme vaate
-alter view vEmployeeDetailsUpdate
-as
-select EmployeeTrigger.Id, Name, Salary, Gender, DeptName
-from EmployeeTrigger
-join Department
-on EmployeeTrigger.DepartmentId = Department.Id
+-- -- alter view vemployeedetailsupdate
+-- -- as
+-- -- select employeetrigger.id, name, salary, gender, deptname
+-- -- from employeetrigger
+-- -- join department
+-- -- on employeetrigger.departmentid = department.id
 
-select * from vEmployeeDetailsUpdate
-update EmployeeTrigger set DepartmentId = 4
-where Id = 4
+-- -- select * from vemployeedetailsupdate
+-- -- update employeetrigger set departmentid = 4
+-- -- where id = 4
 
 --- loome triggeri
 alter trigger trEmployeeDetailsInsteadOfUpdate
