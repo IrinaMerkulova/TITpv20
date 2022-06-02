@@ -270,11 +270,17 @@ values (10, 'Russell', 'Male', 8800, NULL)
 select * from Employees
 
 --- saan ainult selles tabelis olevad veerud
+** selected name
+
 select distinct Name, DepartmentId from Employees
 
 --- arvutame k]ikide palgad kokku
+**selected sum
+
 select sum(cast(Salary as int)) from Employees
 --- k]ige v'iksema palga saaja
+**selected min 
+
 select min(cast(Salary as int)) from Employees
 
 
