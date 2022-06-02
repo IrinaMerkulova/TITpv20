@@ -505,7 +505,8 @@ insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3) * tehtud
 select * from EmployeeAudit  * tehtud
 
 --- peale kustutamist tekiks info EmployeeAudit tabelisse
-* После удаления информация появлась в таблице
+* После удаления информация появлась в таблице 
+
 create trigger EmployeeForDelete
 on EmployeeTrigger
 for delete
@@ -524,6 +525,7 @@ select * from EmployeeAudit    * tehtud
 
 --- after trigger
 -- kasutavad kahte tabelit, milleks on INSERTED ja DELETED
+* используют обе таблицы, для чего есть вставка и удаление
 
 -- after trigger näide
 create trigger trEmployeeForUpdate
