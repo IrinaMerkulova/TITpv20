@@ -476,6 +476,8 @@ select * from EmployeeAudit
 -- kasutavad kahte tabelit, milleks on INSERTED ja DELETED
 
 -- after trigger näide
+
+-- Данный триггер отслеживает Update 
 create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
