@@ -86,6 +86,7 @@ select * from EmployeeAudit
 -- kasutavad kahte tabelit, milleks on INSERTED ja DELETED
 
 -- after trigger näide
+*done created trigger reacting for updates
 create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
