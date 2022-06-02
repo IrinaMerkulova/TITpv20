@@ -485,7 +485,7 @@ Gender = 'Male' where Id = 4
 
 --- teeme update triggeri korda
 --- trigger for update
---update trigger
+--update trigger тригер на обновление
 create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
