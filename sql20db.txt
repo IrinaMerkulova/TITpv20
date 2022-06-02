@@ -600,7 +600,7 @@ select * from EmployeeAudit
 create view vEmployeeDetails
 as
 select EmployeeTrigger.Id, Name, Gender, DeptName
-from EmployeeTrigger
+from EmployeeTrigger                                  * tehtud
 join Department
 on EmployeeTrigger.DepartmentId = Department.Id
 
