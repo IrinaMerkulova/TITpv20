@@ -478,7 +478,7 @@ Gender = 'Male' where Id = 4
 
 
 --- teeme update triggeri korda / tehtud
-create trigger trEmployeeForUpdate
+create trigger trEmployeeForUpdate2
 on EmployeeTrigger
 for update
 as begin
@@ -550,7 +550,7 @@ select * from EmployeeTrigger
 select * from EmployeeAudit
 
 
-create table Department
+create table Department -- tehtud
 (
 Id int primary key,
 DeptName nvarchar(20)
@@ -562,10 +562,10 @@ insert into Department values(3, 'HR')
 insert into Department values(4, 'Admin')
 
 
--- enne triggeri tegemist tuleb teha vaade
+-- enne triggeri tegemist tuleb teha vaade /tehtud
 create view vEmployeeDetails
 as
-select EmployeeTrigger.Id, Name, Gender, DeptName
+select EmployeeTrigger.Id, Name, Gender, DepartmentName
 from EmployeeTrigger
 join Department
 on EmployeeTrigger.DepartmentId = Department.Id
