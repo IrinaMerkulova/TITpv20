@@ -583,12 +583,12 @@ Gender = 'Male' where Id = 4
 	-- end
 -- end
 
-select * from EmployeeTrigger
+select * from EmployeeTrigger     tehtud*
 
 update EmployeeTrigger set Name = 'Todd123', Salary = 3456,
 Gender = 'Female', DepartmentId = 3 
 where Id = 4
-
+                                          * tehtud
 select * from EmployeeTrigger
 select * from EmployeeAudit
 
