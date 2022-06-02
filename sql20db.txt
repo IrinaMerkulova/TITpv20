@@ -708,9 +708,9 @@ set Name = 'Johny', Gender = 'Female', DeptName = 'IT'
 where Id = 1
 
 
---- delete trigger
+--- delete trigger  *удаляем триггер. Если названия триггера нет, то будет ошибка
 
-create trigger trEmployeeDetails_InsteadOfDelete
+create trigger trEmployeeDetails_InsteadOfDelete 
 on vEmployeeDetails
 instead of delete
 as begin
