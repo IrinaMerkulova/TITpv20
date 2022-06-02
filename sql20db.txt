@@ -196,6 +196,8 @@ select * from Person order by Age
 select sum(cast(Age as int)) from Person
 
 --- kuvab kõige nooremat isikut
+**checked lowest and highest age 
+
 select min(cast(Age as int)) from Person
 --- kõige vanem isik
 select max(cast(Age as int)) from Person
