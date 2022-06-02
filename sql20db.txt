@@ -93,7 +93,7 @@ set Age = 149
 where Id = 8
 
 -- veerule piirnagu panemine
-**added new constraint
+**added new constraint 
 alter table Person
 add constraint CK_Person_Age check (Age > 0 and Age < 150)
 
@@ -101,6 +101,7 @@ insert into Person (Id, Name, Email, GenderId, Age)
 values (9, 'Test', 'Test', 2, 160)
 
 --rea kustutamine
+**i ve deleted some values where id is 8
 select * from Person
 go
 delete from Person where Id = 8
