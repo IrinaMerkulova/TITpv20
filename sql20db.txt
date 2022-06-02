@@ -27,7 +27,7 @@ values (2, 'Male') on tehtud
 
 --- nüüd saab kasutada ainult Gender tabelis olevaid väärtuseid
 alter table Person add constraint tblPerson_GenderId_FK
-foreign key (GenderId) references Gender(Id)
+foreign key (GenderId) references Gender(Id) on tehtud
 
 -- sisestame andmed
 insert into Person (Id, Name, Email, GenderId)
