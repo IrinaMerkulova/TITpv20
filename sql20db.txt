@@ -609,7 +609,7 @@ select * from vEmployeeDetails
 
 
 update vEmployeeDetails
-set DeptName = 'Payroll'
+set DepartmenName = 'Payroll'
 where Id = 2
 
 --- teeme vaate
