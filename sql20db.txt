@@ -444,16 +444,16 @@
 -- kasutavad kahte tabelit, milleks on INSERTED ja DELETED
 
 -- after trigger näide
-create trigger trEmployeeForUpdate
-on EmployeeTrigger
-for update
-as begin
-	select * from deleted
-	select * from inserted
-end
+-- create trigger tremployeeforupdate
+-- on employeetrigger
+-- for update
+-- as begin
+	-- select * from deleted
+	-- select * from inserted
+-- end
 
-update EmployeeTrigger set Name = 'Todd', Salary = 2345,
-Gender = 'Male' where Id = 4
+-- update employeetrigger set name = 'todd', salary = 2345,
+-- gender = 'male' where id = 4
 
 
 --- teeme update triggeri korda
