@@ -87,6 +87,7 @@ alter table Person
 add Age nvarchar(10)
 
 --uuendame andmeid
+**ive updated value in table
 update Person
 set Age = 149
 where Id = 8
