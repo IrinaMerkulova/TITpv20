@@ -195,7 +195,7 @@ join Department
 on EmployeeTrigger.DepartmentId = Department.Id
 
 
-
+*done created instead of insert trigger
 ---- instead of insert trigger
 create trigger trEmployeeDetailsInsteadOfInsert
 on vEmployeeDetails
@@ -224,7 +224,7 @@ end
 -- esimene parameeter on veateate sisu, teiene on veatase (nr 16 tähendab üldiseid vigu),
 -- kolmas on veaolek
 
-insert into vEmployeeDetails values(7, 'Valarie', 'Female', 'assd')
+insert into vEmployeeDetails values(7, 'Valarie', 'Female', 'assd') *error
 
 delete from EmployeeTrigger where Id = 7
 --- 10 tund SQL
