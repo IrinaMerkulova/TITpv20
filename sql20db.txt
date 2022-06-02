@@ -309,7 +309,7 @@ create proc spGetEmployeeCountByGender
 @EmployeeCount int output
 as begin
 	select @EmployeeCount = count(Id) from Employees where Gender = @Gender
-end
+end on tehtud
 
 -- annab teada, palju on meessoost isikuid ning kuvab vastava stringi
 declare @TotalCount int
@@ -318,7 +318,7 @@ if(@TotalCount = 0)
 	print '@TotalCount is null'
 else
 	print '@TotalCount is not null'
-print @TotalCount
+print @TotalCount on tehtud
 
 -- annab teada, palju on meessoost isikuid
 declare @TotalCount int
