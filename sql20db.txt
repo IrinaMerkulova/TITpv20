@@ -449,7 +449,7 @@ AuditData nvarchar(1000)
 --- siis EmployeeAudit tabelisse tulevad andmed
 
 --trigger
-create trigger tr_Employee_ForInsert  
+create trigger tr_Employee_ForInsert   *создаем триггер tr_Employee_ForInsert и заполняем EmployeeTrigger
 on EmployeeTrigger
 for insert
 as begin
@@ -466,7 +466,7 @@ insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
 select * from EmployeeAudit
 
 --- peale kustutamist tekiks info EmployeeAudit tabelisse
-create trigger EmployeeForDelete
+create trigger EmployeeForDelete      *создаем триггер удаления Employee и тестируем его (delete from)
 on EmployeeTrigger
 for delete
 as begin
