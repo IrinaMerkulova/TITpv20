@@ -76,7 +76,7 @@ add Age nvarchar(10) on tehtud
 --uuendame andmeid
 update Person
 set Age = 149
-where Id = 8
+where Id = 8 on tehtud
 
 -- veerule piirnagu panemine
 alter table Person
