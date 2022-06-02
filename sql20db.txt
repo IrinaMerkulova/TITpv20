@@ -200,6 +200,8 @@ select sum(cast(Age as int)) from Person
 
 select min(cast(Age as int)) from Person
 --- kõige vanem isik
+**checked city as totalage from person group
+
 select max(cast(Age as int)) from Person
 
 select City, sum(cast(Age as int)) as TotalAge from Person group by City
