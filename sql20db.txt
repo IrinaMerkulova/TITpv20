@@ -54,6 +54,7 @@ insert into Person (Id, Name, Email, GenderId)
 values (7, 'Spiderman', 'spider@spiderman.com', 2)
 
 -- vaatame tabeli andmeid
+it showing table with information
 select * from Person
 
 --- võõrvõtme piirangu maha võtmine
