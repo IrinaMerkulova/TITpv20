@@ -389,12 +389,12 @@
 -- )
 
 
-insert into EmployeeTrigger values(1, 'John', 5000, 'Male', 3)
-insert into EmployeeTrigger values(2, 'Mike', 3400, 'Male', 2)
-insert into EmployeeTrigger values(3, 'Pam', 6000, 'Female', 1)
-insert into EmployeeTrigger values(4, 'Todd', 4800, 'Male', 4)
-insert into EmployeeTrigger values(5, 'Sara', 3200, 'Female', 1)
-insert into EmployeeTrigger values(6, 'Ben', 4800, 'Male', 3)
+-- insert into employeetrigger values(1, 'john', 5000, 'male', 3)
+-- insert into employeetrigger values(2, 'mike', 3400, 'male', 2)
+-- insert into employeetrigger values(3, 'pam', 6000, 'female', 1)
+-- insert into employeetrigger values(4, 'todd', 4800, 'male', 4)
+-- insert into employeetrigger values(5, 'sara', 3200, 'female', 1)
+-- insert into employeetrigger values(6, 'ben', 4800, 'male', 3)
 
 create table EmployeeAudit
 (
