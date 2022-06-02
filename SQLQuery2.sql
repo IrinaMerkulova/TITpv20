@@ -257,7 +257,7 @@ where Id = 4
 
 --- loome triggeri
 -- change trEmployeeDetailsInsteadOfUpdate and vEmployeeDetailsUpdate to vEmployeeDetails alter
--- and update databases data
+-- and update da
 create trigger trEmployeeDetailsInsteadOfUpdate
 on vEmployeeDetails
 instead of update
@@ -321,7 +321,7 @@ where Id = 1
 
 
 --- delete trigger
--- delete
+-- delete data.....
 create trigger trEmployeeDetails_InsteadOfDelete
 on vEmployeeDetails
 instead of delete
@@ -331,7 +331,7 @@ as begin
 	join deleted
 	on EmployeeTrigger.Id = deleted.Id
 end
-
+-- delete all tables who has id of 2
 delete from vEmployeeDetails where Id = 2
 --- kui seda triggerit ei oleks, siis annaks veateate
 
