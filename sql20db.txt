@@ -423,6 +423,7 @@ create database TITpv22;
 
 use TITpv22;
 
+--create a table for works triggers
 create table EmployeeTrigger
 (
 Id int primary key,
@@ -430,7 +431,7 @@ Name varchar(30),
 Salary int,
 Gender nvarchar(10),
 DepartmentId int
-)
+);
 
 
 insert into EmployeeTrigger values(1, 'John', 5000, 'Male', 3)
@@ -440,12 +441,19 @@ insert into EmployeeTrigger values(4, 'Todd', 4800, 'Male', 4)
 insert into EmployeeTrigger values(5, 'Sara', 3200, 'Female', 1)
 insert into EmployeeTrigger values(6, 'Ben', 4800, 'Male', 3)
 
+--create workerAudit
 create table EmployeeAudit
 (
 Id int identity(1, 1) primary key,
 AuditData nvarchar(1000)
 )
 
+
+--- nüüd teeme triggeri, et kui sisestan uue töötaja EmployeeTrigger tabelisse,
+--- siis EmployeeAudit tabelisse tulevad andmed
+
+--trigger
+-- add trigger add audit
 
 --- nüüd teeme triggeri, et kui sisestan uue töötaja EmployeeTrigger tabelisse,
 --- siis EmployeeAudit tabelisse tulevad andmed
