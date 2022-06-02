@@ -117,7 +117,7 @@ select * from Person where Email like '%@%'
 -- n'itab kõiki, kellel ei ole @-märki emailis*on tehtud
 select * from Person where Email not like '%@%'
 
---- näitab, kelle on emailis ees ja peale @-märki
+--- näitab, kelle on emailis ees ja peale @-märki *on tehtud
 -- ainult üks täht
 select * from Person where Email like '_@_.com'
 
