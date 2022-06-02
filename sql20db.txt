@@ -449,7 +449,7 @@ AuditData nvarchar(1000)
 --- siis EmployeeAudit tabelisse tulevad andmed
 
 --trigger
-create trigger tr_Employee_ForInsert
+create trigger tr_Employee_ForInsert  
 on EmployeeTrigger
 for insert
 as begin
