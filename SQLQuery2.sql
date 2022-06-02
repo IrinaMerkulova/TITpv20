@@ -48,6 +48,8 @@ AuditData nvarchar(1000)
 
 --trigger
 -- add trigger add audit
+-- a triggers combine insert data like insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
+-- to a with new id and when added
 create trigger tr_Employee_ForInsert
 on EmployeeTrigger
 for insert
