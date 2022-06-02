@@ -136,7 +136,7 @@ select * from Person order by Name
 --- kuva vastupidises järjestuses
 select * from Person order by Name desc
 
----võtab kolm esimest rida
+---võtab kolm esimest rida *on tehtud
 select top 3 * from Person
 
 --- kolm esimest, aga tabeli järjestus on Age ja siis Name
