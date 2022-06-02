@@ -652,17 +652,17 @@ as
 select EmployeeTrigger.Id, Name, Salary, Gender, DeptName
 from EmployeeTrigger
 join Department
-on EmployeeTrigger.DepartmentId = Department.Id
+on EmployeeTrigger.DepartmentId = Department.Id          * ei tööta enam
 
 select * from vEmployeeDetailsUpdate
 update EmployeeTrigger set DepartmentId = 4
 where Id = 4
 
---- loome triggeri
-alter trigger trEmployeeDetailsInsteadOfUpdate
+--- loome triggeri  * The object 'vEmployeeDetailsUpdate' does not exist or is invalid for this operation.
+alter trigger trEmployeeDetailsInsteadOfUpdate 
 on vEmployeeDetailsUpdate
 instead of update
-as begin
+as begin                                       *ei tööta enam
 	if(update(Id))
 	begin
 		raiserror('Id cannot be changed', 16, 1)
@@ -697,7 +697,7 @@ as begin
 		on EmployeeTrigger.Id = inserted.Id
 	end
 
-	if(UPDATE(Name))
+	if(UPDATE(Name)) 
 	begin
 		update EmployeeTrigger set Name = inserted.Name
 		from inserted
