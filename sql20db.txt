@@ -303,6 +303,9 @@ add MiddleName nvarchar(30)
 alter table Employees
 add LastName nvarchar(30)
 
+
+**updated names new names
+
 update Employees set FirstName = 'Tom', MiddleName = 'Nick', LastName = 'Jones'
 where Id = 1
 update Employees set FirstName = 'Pam', MiddleName = NULL, LastName = 'Anderson'
@@ -326,6 +329,7 @@ where Id = 10
 
 
 --- igast reast võtab esimeses veerus täidetud lahtri ja kuvab ainult seda
+** selected  name ast employes
 select Id, coalesce(FirstName, MiddleName, LastName) as Name
 from Employees
 
