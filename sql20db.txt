@@ -109,6 +109,7 @@ go
 select * from Person
 
 --- lisame veeru juurde
+**worked i added cities where i can add values
 alter table Person
 add City nvarchar(25)
 
