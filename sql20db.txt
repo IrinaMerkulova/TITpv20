@@ -571,7 +571,7 @@ select * from EmployeeTrigger
 select * from EmployeeAudit
 
 
-create table Department
+create table Department      *создаю таблицу и заполняю (старую удалил)
 (
 Id int primary key,
 DeptName nvarchar(20)
