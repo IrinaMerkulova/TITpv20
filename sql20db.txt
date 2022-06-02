@@ -911,9 +911,9 @@ git push
 -- select * from vemployeedetails
 
 
-update vEmployeeDetails
-set DeptName = 'Payroll'
-where Id = 2
+-- update vemployeedetails
+-- set deptname = 'payroll'
+-- where id = 2
 
 --- teeme vaate
 alter view vEmployeeDetailsUpdate
