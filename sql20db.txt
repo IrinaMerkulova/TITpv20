@@ -1,8 +1,8 @@
 ﻿-- db loomine *on tehtud
 create database TITpv20
 
--- db kustutamine
-DRop DataBASE Tarpe21
+-- db kustutamine *on tehtud
+DRop DataBASE TITpv20
 
 --- teeme tabeli
 create table Gender
