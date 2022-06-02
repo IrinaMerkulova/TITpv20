@@ -163,6 +163,8 @@ select * from Person where (City = 'Gotham' or City = 'New York')
 and Age >= 40
 
 -- kuvab tähestikulises järjekorras inimesi ja võtab aluseks Name veeru
+
+*checked persons with sorting by name
 select * from Person order by Name
 --- kuva vastupidises järjestuses
 select * from Person order by Name desc
