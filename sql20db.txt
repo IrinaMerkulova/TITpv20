@@ -519,13 +519,13 @@
 	-- end
 -- end
 
-select * from EmployeeTrigger
+-- select * from employeetrigger
 
-update EmployeeTrigger set Name = 'Todd123', Salary = 3456,
-Gender = 'Female', DepartmentId = 3 
-where Id = 4
+-- update employeetrigger set name = 'todd123', salary = 3456,
+-- gender = 'female', departmentid = 3 
+-- where id = 4
 
-select * from EmployeeTrigger
+-- select * from employeetrigger
 select * from EmployeeAudit
 
 
