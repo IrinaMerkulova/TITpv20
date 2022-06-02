@@ -232,12 +232,12 @@ alter table Employees *on tehtud
 add City nvarchar(25)
 
 
-alter table Employees
+alter table Employees *on tehtud
 add DepartmentId
 int null
 
 
---- lisame tabelid
+--- lisame tabelid *on tehtud
 alter table Employees
 add MiddleName nvarchar(30)
 
