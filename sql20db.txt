@@ -165,9 +165,9 @@ select City, sum(cast(Age as int)) as TotalAge from Persongroup by City
 
 
 
---- tund 3
+--- tund 3 
 
---- loome uued tabelid
+--- loome uued tabelid * 
 create table Department
 (
 Id int primary key,
