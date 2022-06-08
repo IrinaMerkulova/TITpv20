@@ -5,7 +5,7 @@ create database Tarpe21
 -- db kustutamine
 **worked
 DRop DataBASE Tarpe21
-
+ 
 --- teeme tabeli
 
 **table was created
@@ -516,6 +516,8 @@ select * from EmployeeAudit
 -- kasutavad kahte tabelit, milleks on INSERTED ja DELETED
 
 -- after trigger näide
+**created triggeres for update
+
 create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
@@ -534,12 +536,15 @@ on EmployeeTrigger
 for update
 as begin
 	-- deklareerisime muutujad, mida hakkame kasutama
+	**maked declare for triggers
 	Declare @Id int
 	declare @OldName nvarchar(30), @NewName nvarchar(30)
 	declare @OldSalary int, @NewSalary int
 	declare @OldGender nvarchar(10), @NewGender nvarchar(10)
 	declare @OldDeptId int, @NewDeptId int
 	-- muutuja, millega hakkame ehitama audit build-i
+**declarred auditstring
+
 	declare @AuditString nvarchar(1000)
 	-- sisestab andmed temp table-sse
 	select * into #TempTable
@@ -548,9 +553,11 @@ as begin
 	while(exists(select Id from #TempTable))
 	begin
 		-- tühja stringi initsialiserimine
+	**not worked
 		Set @AuditString = ''
 
 		-- selekteerime esimese rea andmed temp table-st 
+**worked
 		select top 1 @Id = Id, @NewName = Name,
 		@NewGender = Gender, @NewSalary = Salary,
 		@NewDeptId = DepartmentId
@@ -614,6 +621,7 @@ insert into Department values(4, 'Admin')
 
 
 -- enne triggeri tegemist tuleb teha vaade
+**wokred without deptname
 create view vEmployeeDetails
 as
 select EmployeeTrigger.Id, Name, Gender, DeptName
