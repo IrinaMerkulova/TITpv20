@@ -89,7 +89,7 @@ values (9, 'Test', 'Test', 2, 160)
 --rea kustutamine * 
 select * from Person
 go
-delete from Personwhere Id = 8
+delete from Person Where Id = 8
 go
 select * from Person
 
@@ -98,38 +98,38 @@ alter table Person
 add City nvarchar(25)
 
 -- tahame tead kõiki, kes elavad Gothami linnas  *
-select * from Personwhere City = 'Gotham'
+select * from Person Where City = 'Gotham'
 -- kõik, kes ei ela Gothamis
-select * from Personwhere City <> 'Gotham'
-select * from Personwhere City != 'Gotham'
+select * from Person Where City <> 'Gotham'
+select * from Person Where City != 'Gotham'
 
 -- näitab teatud vanusega inimesi * 
-select *from Personwhere Age = 100 or 
+select *from Person Where Age = 100 or 
 Age = 50 or Age = 20
-select * from Personwhere Age in (100, 50, 20)
+select * from Person Where Age in (100, 50, 20)
 
 --- näitab teatud vanusevahemikus olevaid inimesi
-select * from Personwhere Age between 30 and 50
+select * from Person Where Age between 30 and 50
 
 --- wildcard e näitab kõik g-tähega linnad
-select * from Personwhere City like 'n%'
-select * from Personwhere Email like '%@%'
+select * from Person Where City like 'n%'
+select * from Person Where Email like '%@%'
 
 -- n'itab kõiki, kellel ei ole @-märki emailis
-select * from Personwhere Email not like '%@%'
+select * from Person Where Email not like '%@%'
 
 --- näitab, kelle on emailis ees ja peale @-märki
 -- ainult üks täht
-select * from Personwhere Email like '_@_.com'
+select * from Person Where Email like '_@_.com'
 
 --- kõik, kellel ei ole nimes esimene täht W, A ja S
-select * from Personwhere Name like '[^WAS]%'
+select * from Person Where Name like '[^WAS]%'
 
 --- kes elavad Gothamis ja New Yorkis
-select * from Personwhere (City = 'Gotham' or City = 'New York')
+select * from Person Where (City = 'Gotham' or City = 'New York')
 
 --- kõik, kes elevad välja toodud linnades ja on vanemad kui 40 a
-select * from Personwhere (City = 'Gotham' or City = 'New York')
+select * from Person Where (City = 'Gotham' or City = 'New York')
 and Age >= 40
 
 -- kuvab tähestikulises järjekorras inimesi ja võtab aluseks Name veeru
