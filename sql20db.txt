@@ -442,9 +442,9 @@ delete from EmployeeTrigger where Id = 7
 select * from EmployeeAudit
 
 --- after trigger
--- kasutavad kahte tabelit, milleks on INSERTED ja DELETED
+-- kasutavad kahte tabelit, milleks on INSERTED ja DELETED * 
 
--- after trigger näide
+-- after trigger näide * 
 create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
