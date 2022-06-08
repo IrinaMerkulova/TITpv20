@@ -278,7 +278,7 @@ select * from Department
 
 
 
---- loome stored procedure, mis kuvab vaate
+--- loome stored procedure, mis kuvab vaate * 
 create procedure spGetEmployees
 as begin
 	select FirstName, Gender from Employees
@@ -289,7 +289,7 @@ exec spGetEmployees
 execute spGetEmployees
 
 --- 
-create proc spGetEmployeesByGenderAndDepartment
+create proc spGetEmployeesByGenderAndDepartment *
 @Gender nvarchar(20),
 @DepartmentId int
 as begin
