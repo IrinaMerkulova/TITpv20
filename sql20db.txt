@@ -457,7 +457,7 @@ update EmployeeTrigger set Name = 'Todd', Salary = 2345,
 Gender = 'Male' where Id = 4
 
 
---- teeme update triggeri korda
+--- teeme update triggeri korda * 
 create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
