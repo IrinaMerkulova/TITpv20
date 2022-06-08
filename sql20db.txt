@@ -195,7 +195,7 @@ values (3, 'HR', 'New York', 'Christie')
 insert into Department (Id, DepartmentName, Location, DepartmentHead)
 values (4, 'Other Deparment', 'Sydney', 'Cindrella')
 
-select * from Department
+select * from Department * 
 
 insert into Employees (Id, Name, Gender, Salary, DepartmentId)
 values (1, 'Tom', 'Male', 4000, 1)
@@ -218,9 +218,9 @@ values (9, 'James', 'Male', 6500, NULL)
 insert into Employees (Id, Name, Gender, Salary, DepartmentId)
 values (10, 'Russell', 'Male', 8800, NULL)
 
-select * from Employees
+select * from Employees 
 
---- saan ainult selles tabelis olevad veerud
+--- saan ainult selles tabelis olevad veerud * 
 select distinct Name, DepartmentId from Employees
 
 --- arvutame k]ikide palgad kokku
