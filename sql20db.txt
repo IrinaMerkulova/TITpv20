@@ -242,7 +242,7 @@ int null
 alter table Employees
 add MiddleName nvarchar(30)
 
-alter table Employees
+alter table Employees * 
 add LastName nvarchar(30)
 
 update Employees set FirstName = 'Tom', MiddleName = 'Nick', LastName = 'Jones'
