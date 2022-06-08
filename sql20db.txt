@@ -476,7 +476,8 @@ AuditData nvarchar(1000)
 --- nüüd teeme triggeri, et kui sisestan uue töötaja EmployeeTrigger tabelisse,
 --- siis EmployeeAudit tabelisse tulevad andmed
 
---trigger
+--trigge
+**createed trigger for insert
 create trigger tr_Employee_ForInsert
 on EmployeeTrigger
 for insert
@@ -494,6 +495,7 @@ insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
 select * from EmployeeAudit
 
 --- peale kustutamist tekiks info EmployeeAudit tabelisse
+**created trigger for delete
 create trigger EmployeeForDelete
 on EmployeeTrigger
 for delete
