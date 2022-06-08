@@ -103,7 +103,7 @@ select * from Personwhere City = 'Gotham'
 select * from Personwhere City <> 'Gotham'
 select * from Personwhere City != 'Gotham'
 
--- näitab teatud vanusega inimesi
+-- näitab teatud vanusega inimesi * 
 select *from Personwhere Age = 100 or 
 Age = 50 or Age = 20
 select * from Personwhere Age in (100, 50, 20)
