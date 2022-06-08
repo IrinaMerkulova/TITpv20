@@ -115,20 +115,20 @@ select * from Person Where Age between 30 and 50
 select * from Person Where City like 'n%'
 select * from Person Where Email like '%@%'
 
--- n'itab kõiki, kellel ei ole @-märki emailis
+-- n'itab kõiki, kellel ei ole @-märki emailis *
 select * from Person Where Email not like '%@%'
 
---- näitab, kelle on emailis ees ja peale @-märki
+--- näitab, kelle on emailis ees ja peale @-märki * 
 -- ainult üks täht
 select * from Person Where Email like '_@_.com'
 
---- kõik, kellel ei ole nimes esimene täht W, A ja S
+--- kõik, kellel ei ole nimes esimene täht W, A ja S * 
 select * from Person Where Name like '[^WAS]%'
 
---- kes elavad Gothamis ja New Yorkis
+--- kes elavad Gothamis ja New Yorkis * 
 select * from Person Where (City = 'Gotham' or City = 'New York')
 
---- kõik, kes elevad välja toodud linnades ja on vanemad kui 40 a
+--- kõik, kes elevad välja toodud linnades ja on vanemad kui 40 a *
 select * from Person Where (City = 'Gotham' or City = 'New York')
 and Age >= 40
 
