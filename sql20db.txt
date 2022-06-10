@@ -2,8 +2,8 @@ Luhvischyk
 -- db loomine TITpv20 *
 create database TITpv20
 
--- db kustutamine
-DRop DataBASE Tarpe21
+-- db kustutamine TITpv20
+DRop DataBASE TITpv20
 
 --- teeme tabeli
 create table Gender
