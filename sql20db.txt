@@ -295,13 +295,7 @@ as begin
 	and DepartmentId = @DepartmentId
 end
 
---- kõik esimeses osakonnas meessoost töötavad isikud
-spGetEmployeesByGenderAndDepartment 'Male', 1
-
-spGetEmployeesByGenderAndDepartment @DepartmentId =  1, @Gender = 'Male'
-
-
-
+--- kõik esimeses osakonnas meessoost töötavad isikud *
 
 create proc spGetEmployeeCountByGender
 @Gender nvarchar(20),
