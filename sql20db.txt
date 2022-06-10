@@ -62,7 +62,7 @@ add constraint DF_Person_GenderId
 default 3 for GenderId
 
 
----- 2 tund
+---- 2 tund * 
 
 select * from Person
 select * from Gender
