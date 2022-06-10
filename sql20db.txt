@@ -431,7 +431,7 @@ select * from EmployeeAudit
 --- after trigger
 -- kasutavad kahte tabelit, milleks on INSERTED ja DELETED
 
--- after trigger näide / tehtud
+-- after trigger näide / tehtud *
 create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
