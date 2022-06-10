@@ -411,7 +411,7 @@ insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
 
 select * from EmployeeAudit
 
---- peale kustutamist tekiks info EmployeeAudit tabelisse / tehtud
+--- peale kustutamist tekiks info EmployeeAudit tabelisse / tehtud *
 create trigger EmployeeForDelete
 on EmployeeTrigger
 for delete
