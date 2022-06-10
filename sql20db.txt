@@ -350,9 +350,9 @@ print 'Name of the employee = ' + @EmployeeName
 
 select * from Employees
 
---tund 4 --- trigger
+--tund 4 --- trigger *
 
--- triggereid on kolme tüüpi
+-- triggereid on kolme tüüpi *
 --1. DML trigger
 --2. DDL trigger
 --3. LOGON trigger
@@ -364,7 +364,7 @@ select * from Employees
 --- DML-i peamised käsud: Insert, Update ja Delete
 
 -- after trigger:  käivitub peale mingit tegevust
--- instead trigger: käivitub enne triggeri tegevuse toimumist
+-- instead trigger: käivitub enne triggeri tegevuse toimumist *
 create database TITpv22
 
 create table EmployeeTrigger -- tehtud
