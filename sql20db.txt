@@ -5,7 +5,7 @@ create database TITpv20
 -- db kustutamine TITpv20 *
 DRop DataBASE TITpv20
 
---- teeme tabeli
+--- teeme tabeli Gender *
 create table Gender
 (
 Id int NOT NULL primary key,
