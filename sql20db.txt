@@ -394,7 +394,7 @@ AuditData nvarchar(1000)
 --- nüüd teeme triggeri, et kui sisestan uue töötaja EmployeeTrigger tabelisse,
 --- siis EmployeeAudit tabelisse tulevad andmed
 
---trigger TEHTUD
+--trigger TEHTUD *
 create trigger tr_Employee_ForInsert
 on EmployeeTrigger
 for insert
