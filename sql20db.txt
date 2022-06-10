@@ -125,7 +125,7 @@ select * from Person where Email like '_@_.com'
 --- kõik, kellel ei ole nimes esimene täht W, A ja S *
 select * from Person where Name like '[^WAS]%'
 
---- kes elavad Gothamis ja New Yorkis
+--- kes elavad Gothamis ja New Yorkis *
 select * from Person where (City = 'Gotham' or City = 'New York')
 
 --- kõik, kes elevad välja toodud linnades ja on vanemad kui 40 a
