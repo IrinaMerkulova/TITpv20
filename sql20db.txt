@@ -1,5 +1,6 @@
--- db loomine
-create database Tarpe21
+Luhvischyk
+-- db loomine TITpv20
+create database TITpv20
 
 -- db kustutamine
 DRop DataBASE Tarpe21
