@@ -1,5 +1,5 @@
 Luhvischyk
--- db loomine TITpv20
+-- db loomine TITpv20 *
 create database TITpv20
 
 -- db kustutamine
