@@ -135,7 +135,7 @@ and Age >= 40
 -- kuvab tähestikulises järjekorras inimesi ja võtab aluseks Name veeru *
 select * from Person order by Name
 --- kuva vastupidises järjestuses
-select * from Person order by Name desc
+select * from Person order by Name desc *
 
 ---võtab kolm esimest rida
 select top 3 * from Person
