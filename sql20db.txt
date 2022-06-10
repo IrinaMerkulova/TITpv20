@@ -2,7 +2,7 @@ Luhvischyk
 -- db loomine TITpv20 *
 create database TITpv20
 
--- db kustutamine TITpv20
+-- db kustutamine TITpv20 *
 DRop DataBASE TITpv20
 
 --- teeme tabeli
