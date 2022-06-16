@@ -169,7 +169,7 @@ where Id = 4
 select * from EmployeeTrigger
 select * from EmployeeAudit
 
-
+-- создает новую таблицу Department
 create table Department
 (
 Id int primary key,
