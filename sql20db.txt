@@ -181,8 +181,8 @@ insert into Department values(2, 'Payroll')
 insert into Department values(3, 'HR')
 insert into Department values(4, 'Admin')
 
-
 -- enne triggeri tegemist tuleb teha vaade
+-- нужно создать до триггера
 create view vEmployeeDetails
 as
 select EmployeeTrigger.Id, Name, Gender, DeptName
