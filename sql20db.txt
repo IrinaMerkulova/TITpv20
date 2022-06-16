@@ -223,7 +223,7 @@ end
 
 -- добавляет данные в таблицу vEmployeeDetails
 insert into vEmployeeDetails values(7, 'Valarie', 'Female', 'assd')
-
+-- проверка триггера trEmployeeDetailsInsteadOfInsert
 delete from EmployeeTrigger where Id = 7
 --- 10 tund SQL
 select * from EmployeeTrigger
