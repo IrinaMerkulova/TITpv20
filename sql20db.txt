@@ -422,9 +422,9 @@ as begin
 	+ ' is added at ' + cast(Getdate() as nvarchar(20)))
 end
 
-insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3)
+insert into EmployeeTrigger values(7, 'Jimmy', 1800, 'Male', 3) tehtud 
 
-select * from EmployeeAudit
+select * from EmployeeAudit 
 
 --- peale kustutamist tekiks info EmployeeAudit tabelisse / tehtud
 create trigger EmployeeForDelete
