@@ -243,6 +243,7 @@ from EmployeeTrigger
 join Department
 on EmployeeTrigger.DepartmentId = Department.Id
 
+-- выводит данные из таблицы vEmployeeDetailsUpdate
 select * from vEmployeeDetailsUpdate
 update EmployeeTrigger set DepartmentId = 4
 where Id = 4
