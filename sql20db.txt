@@ -42,7 +42,7 @@ AuditData nvarchar(1000)
 
 --- nüüd teeme triggeri, et kui sisestan uue töötaja EmployeeTrigger tabelisse,
 --- siis EmployeeAudit tabelisse tulevad andmed
-
+-- создает тригер, который, добавляет запись о добавлении данных в таблицу EmployeeAudit 
 --trigger TEHTUD
 create trigger tr_Employee_ForInsert
 on EmployeeTrigger
