@@ -305,6 +305,7 @@ as begin
 	end
 end
 
+--проверка триггера trEmployeeDetailsInsteadOfUpdate
 select * from EmployeeTrigger
 
 update vEmployeeDetailsUpdate
