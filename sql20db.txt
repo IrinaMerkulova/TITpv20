@@ -336,7 +336,7 @@ end
 --- käivitame sp
 declare @TotalEmployees int
 execute spTotalCount2 @TotalEmployees output
-select @TotalEmployees * 
+select @TotalEmployees * d
 
 --- mis id all on keegi nime järgi
 create proc spGetNameById1
