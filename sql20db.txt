@@ -381,7 +381,7 @@ select * from Employees
 -- instead trigger: käivitub enne triggeri tegevuse toimumist
 create database TITpv22 tehtud *
 
-create table EmployeeTrigger -- tehtud
+create table EmployeeTrigger -- tehtus
 (
 Id int primary key,
 Name varchar(30),
