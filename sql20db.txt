@@ -249,6 +249,7 @@ update EmployeeTrigger set DepartmentId = 4
 where Id = 4
 
 --- loome triggeri
+-- создает триггер trEmployeeDetailsInsteadOfUpdate
 alter trigger trEmployeeDetailsInsteadOfUpdate
 on vEmployeeDetailsUpdate
 instead of update
