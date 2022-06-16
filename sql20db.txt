@@ -349,7 +349,7 @@ end
 --- käivitame sp
 declare @FirstName nvarchar(50)
 execute spGetNameById1 6, @FirstName output
-print 'Name of the employee = ' + @FirstName
+print 'Name of the employee = ' + @FirstName * 
 
 
 create proc spGetNameById2
