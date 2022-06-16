@@ -159,7 +159,7 @@ as begin
 		delete from #TempTable where Id = @Id
 	end
 end
-
+-- проверка триггера trEmployeeForUpdate
 select * from EmployeeTrigger
 
 update EmployeeTrigger set Name = 'Todd123', Salary = 3456,
