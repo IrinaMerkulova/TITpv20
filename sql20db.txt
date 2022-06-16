@@ -315,6 +315,8 @@ where Id = 1
 
 --- delete trigger
 
+--создает триггер для удаления 
+
 create trigger trEmployeeDetails_InsteadOfDelete
 on vEmployeeDetails
 instead of delete
