@@ -235,6 +235,7 @@ set DeptName = 'Payroll'
 where Id = 2
 
 --- teeme vaate
+-- нужно создать перед триггером trEmployeeDetailsInsteadOfUpdate
 alter view vEmployeeDetailsUpdate
 as
 select EmployeeTrigger.Id, Name, Salary, Gender, DeptName
