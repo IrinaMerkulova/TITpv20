@@ -379,7 +379,7 @@ select * from Employees
 
 -- after trigger:  käivitub peale mingit tegevust
 -- instead trigger: käivitub enne triggeri tegevuse toimumist
-create database TITpv22
+create database TITpv22 tehtud *
 
 create table EmployeeTrigger -- tehtud
 (
