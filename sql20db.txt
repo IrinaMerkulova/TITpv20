@@ -193,6 +193,7 @@ on EmployeeTrigger.DepartmentId = Department.Id
 
 
 ---- instead of insert trigger
+-- создает триггер который реагирует на добавление
 create trigger trEmployeeDetailsInsteadOfInsert
 on vEmployeeDetails
 instead of insert
