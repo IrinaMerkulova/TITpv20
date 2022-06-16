@@ -355,8 +355,8 @@ print 'Name of the employee = ' + @FirstName *
 create proc spGetNameById2
 @Id int
 as begin
-	return (select FirstName from Employees where Id = @Id)
-end
+	return (select FirstName from Employees where Id = @Id) 
+end on tehtud *
 -- tuleb veatead kuna kutsusime välja int-i, aga Tom on string
 declare @EmployeeName nvarchar(50)
 exec @EmployeeName = spGetNameById2 1
