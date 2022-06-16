@@ -25,7 +25,7 @@ Gender nvarchar(10),
 DepartmentId int
 )
 
--- tehtud
+-- заполнение полей
 insert into EmployeeTrigger values(1, 'John', 5000, 'Male', 3)
 insert into EmployeeTrigger values(2, 'Mike', 3400, 'Male', 2)
 insert into EmployeeTrigger values(3, 'Pam', 6000, 'Female', 1)
