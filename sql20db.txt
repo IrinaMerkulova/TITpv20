@@ -175,7 +175,7 @@ create table Department
 Id int primary key,
 DeptName nvarchar(20)
 )
-
+-- заполняет таблицу Department
 insert into Department values(1, 'IT')
 insert into Department values(2, 'Payroll')
 insert into Department values(3, 'HR')
