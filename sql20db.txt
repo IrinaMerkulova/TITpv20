@@ -563,7 +563,7 @@ as begin
 	join inserted
 	on inserted.DeptName = Department.DeptName
 
-	if(@DeptId is null)
+	if(@DeptId is null) on tehtud *
 	begin
 		raiserror('Invalid Department Name. Statement terminated', 16, 1)
 		return
