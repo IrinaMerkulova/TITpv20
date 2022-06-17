@@ -461,7 +461,7 @@ create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
 as begin
-	-- deklareerisime muutujad, mida hakkame kasutama
+	-- deklareerisime muutujad, mida hakkame kasutama on tehtud *
 	Declare @Id int
 	declare @OldName nvarchar(30), @NewName nvarchar(30)
 	declare @OldSalary int, @NewSalary int
