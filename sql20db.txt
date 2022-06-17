@@ -351,7 +351,7 @@ execute spGetNameById1 6, @FirstName output
 print 'Name of the employee = ' + @FirstName
 
 
-create proc spGetNameById2
+create proc spGetNameById2 on tehtud **********
 @Id int
 as begin
 	return (select FirstName from Employees where Id = @Id)
