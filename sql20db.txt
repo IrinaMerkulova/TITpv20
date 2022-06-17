@@ -346,7 +346,7 @@ as begin
 end
 
 --- käivitame sp
-declare @FirstName nvarchar(50)
+declare @FirstName nvarchar(50) on tehtud ***
 execute spGetNameById1 6, @FirstName output
 print 'Name of the employee = ' + @FirstName
 
