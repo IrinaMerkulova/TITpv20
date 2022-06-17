@@ -529,7 +529,7 @@ select * from EmployeeTrigger on tehtud *
 select * from EmployeeAudit on tehtud *
 
 
-create table Department
+create table Department on tehtud *
 (
 Id int primary key,
 DeptName nvarchar(20)
