@@ -289,7 +289,7 @@ exec spGetEmployees
 execute spGetEmployees
 
 --- 
-create proc spGetEmployeesByGenderAndDepartment on tehtud *
+create proc spGetEmployeesByGenderAndDepartment tehtud ****
 @Gender nvarchar(20),
 @DepartmentId int
 as begin
