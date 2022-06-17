@@ -1,4 +1,4 @@
--- db loomine
+﻿-- db loomine
 create database Tarpe21
 
 -- db kustutamine
@@ -519,7 +519,7 @@ as begin
 	end
 end
 
-select * from EmployeeTrigger
+select * from EmployeeTrigger tehtud **
 
 update EmployeeTrigger set Name = 'Todd123', Salary = 3456,
 Gender = 'Female', DepartmentId = 3 
