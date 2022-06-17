@@ -242,7 +242,7 @@ alter table Employees
 add MiddleName nvarchar(30)
 
 alter table Employees
-add LastName nvarchar(30)
+add LastName nvarchar(30) on tehtud *
 
 update Employees set FirstName = 'Tom', MiddleName = 'Nick', LastName = 'Jones'
 where Id = 1
