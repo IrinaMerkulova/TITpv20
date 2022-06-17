@@ -449,7 +449,7 @@ on EmployeeTrigger
 for update
 as begin
 	select * from deleted on tehtud *
-	select * from inserted
+	select * from inserted on tehtud *
 end
 
 update EmployeeTrigger set Name = 'Todd', Salary = 2345,
