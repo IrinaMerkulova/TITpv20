@@ -233,7 +233,7 @@ alter table Employees on tehtud ****
 add City nvarchar(25)
 
 
-alter table Employees
+alter table Employees on tehtud ***
 add DepartmentId
 int null
 
