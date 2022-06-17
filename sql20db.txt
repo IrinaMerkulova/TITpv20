@@ -448,7 +448,7 @@ create trigger trEmployeeForUpdate
 on EmployeeTrigger
 for update
 as begin
-	select * from deleted
+	select * from deleted on tehtud *
 	select * from inserted
 end
 
