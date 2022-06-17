@@ -176,7 +176,7 @@ Location nvarchar(50),
 DepartmentHead nvarchar(50)
 )
 
-create table Employees
+create table Employees on tehtud ****
 (
 Id int primary key,
 Name nvarchar(50),
