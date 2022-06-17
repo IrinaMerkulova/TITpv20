@@ -1,8 +1,9 @@
-﻿-- db loomine
+﻿danielfjodorov22
+-- db loomine
 create database Tarpe20 tehtud 
 
 -- db kustutamine
-DRop DataBASE Tarpe21 tehtud * 
+DRop DataBASE Tarpe21 tehtud * *********
 
 --- teeme tabeli
 create table Gender
