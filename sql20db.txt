@@ -277,8 +277,8 @@ select * from Department
 
 
 
---- loome stored procedure, mis kuvab vaate
-create procedure spGetEmployees
+--- loome stored procedure, mis kuvab vaate on tehtud * 
+create procedure spGetEmployees 
 as begin
 	select FirstName, Gender from Employees
 end
