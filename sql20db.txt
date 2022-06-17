@@ -526,7 +526,7 @@ Gender = 'Female', DepartmentId = 3
 where Id = 4
 
 select * from EmployeeTrigger on tehtud *
-select * from EmployeeAudit
+select * from EmployeeAudit on tehtud *
 
 
 create table Department
