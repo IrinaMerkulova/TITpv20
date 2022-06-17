@@ -31,7 +31,7 @@ alter table Person add constraint tblPerson_GenderId_FK
 foreign key (GenderId) references Gender(Id)
 
 -- sisestame andmed
-insert into Person (Id, Name, Email, GenderId)
+insert into Person (Id, Name, Email, GenderId) on tehtud 
 values (1, 'Supermees', 's@s.com', 2)
 insert into Person (Id, Name, Email, GenderId)
 values (2, 'Wonderwoman', 'w@w.com', 1)
