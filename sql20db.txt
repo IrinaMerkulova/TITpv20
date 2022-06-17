@@ -2,7 +2,7 @@
 create database Tarpe21 tehtud *
 
 -- db kustutamine
-DRop DataBASE Tarpe21
+DRop DataBASE Tarpe21 tehtud * 
 
 --- teeme tabeli
 create table Gender
