@@ -1,5 +1,5 @@
 ﻿-- db loomine
-create database Tarpe21
+create database Tarpe21 tehtud *
 
 -- db kustutamine
 DRop DataBASE Tarpe21
