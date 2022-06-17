@@ -239,7 +239,7 @@ int null
 
 
 --- lisame tabelid
-alter table Employees
+alter table Employees on tehtud *****
 add MiddleName nvarchar(30)
 
 alter table Employees on tehtud * 
